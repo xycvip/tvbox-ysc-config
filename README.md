@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-27 15:17:40（北京时间） · 成功 **9/10** 个源
+> 🔄 最近更新：2026-10-28 01:58:22（北京时间） · 成功 **9/10** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -51,6 +51,225 @@ tvbox-ysc-config/
 部署完成后，把下面任一地址填入 App 的「设置 → 配置地址」：
 
 <!-- ARTIFACT_LINKS_START -->
+以下地址由 GitHub Actions 自动更新，每个代码框右上角可复制。
+
+> HTTP 状态为 GitHub Actions 运行环境中的检测结果，不代表所有手机、电视或网络均可访问。
+
+### 多仓订阅
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
+```
+
+### 单仓聚合
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
+```
+
+### 线路 · 肥猫
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
+```
+
+### 线路 · 饭太硬
+
+**原始直链状态：❌ HTTP 404（地址不存在）**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
+```
+
+**代理链接状态：❌ HTTP 404（地址不存在）**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
+```
+
+### 线路 · 王二小
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
+```
+
+### 线路 · 老刘备
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
+```
+
+### 线路 · 小马
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
+```
+
+### 线路 · 讴歌
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/ouge.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/ouge.json
+```
+
+### 线路 · 4K小盒子
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
+```
+
+### 线路 · 小盒子单仓
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
+```
+
+### 线路 · 拾光多仓
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/shiguang.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/shiguang.json
+```
+
+### 线路 · 挺好分享多仓
+
+**原始直链状态：✅ HTTP 200**
+
+**原始直链**
+
+```text
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/tinghao.json
+```
+
+**代理链接状态：✅ HTTP 200**
+
+**代理链接**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/tinghao.json
+```
 <!-- ARTIFACT_LINKS_END -->
 
 > 多仓订阅与单仓文件里的地址由脚本根据 `GITHUB_REPOSITORY` 环境变量自动生成。若国内直连 raw.githubusercontent.com 慢，可套一层 `ghproxy` / `gh-proxy` 等加速前缀。
