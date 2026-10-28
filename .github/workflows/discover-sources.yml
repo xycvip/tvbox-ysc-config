@@ -2,12 +2,16 @@
 name: Discover TVBox Sources
 
 on:
+  # 北京时间每天凌晨 02:00（UTC 前一天 18:00）
   schedule:
     - cron: '0 18 * * *'
+
+  # 支持手动运行
   workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: discover-tvbox-sources
@@ -16,31 +20,58 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+
     steps:
+      # 1. 获取仓库代码
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
+      # 2. 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
+      # 3. 安装依赖
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install requests
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          else
+            python -m pip install requests
+          fi
 
+      # 4. 发现、检测并追加指定源地址
       - name: Discover and append selected sources
         run: python scripts/discover_sources.py
 
+      # 5. 只有文件发生变化时才提交
       - name: Commit changes if any
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add config/sources.json
+
           if git diff --cached --quiet; then
             echo "没有新增源地址，无需提交。"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "自动发现并追加 TVBox 源"
-            git push
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # 6. 新地址提交成功后，主动触发原更新工作流
+      - name: Trigger update workflow
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run update.yml --ref main
+          echo "已请求启动 Auto Update TVBox Configs 工作流。"
