@@ -28,7 +28,7 @@ OUTPUT_DIR = os.path.join(ROOT, "output")
 README_PATH = os.path.join(ROOT, "README.md")
 
 DEFAULT_REPO = "xycvip/tvbox-ysc-config"
-USER_AGENT = "okhttp/3.14.9"
+USER_AGENT = "Mozilla/5.0"
 TIMEOUT = 20
 MAX_RETRIES = 2
 RETRY_BACKOFF = 2
@@ -311,35 +311,42 @@ def update_readme(status, ok_count, total):
         return
     with open(README_PATH, "r", encoding="utf-8") as file:
         readme = file.read()
+    # 修正 README 中残留的上游仓库地址，统一指向当前仓库。
+    readme = readme.replace("Lightconer/tvbox-ysc-config", "xycvip/tvbox-ysc-config")
     if STATUS_START not in readme or STATUS_END not in readme:
         return
 
+    # 状态表只展示每个源的总体更新结果，避免与下方逐条链接重复显示。
     lines = [
         f"> 🔄 最近更新：{status['updated_at']}（北京时间） · 成功 **{ok_count}/{total}** 个源",
         "",
-        "| 配置源 | 状态 | 使用地址 |",
-        "| --- | --- | --- |",
+        "| 配置源 | 更新状态 |",
+        "| --- | --- |",
     ]
     for source in status["sources"]:
         if source.get("cached"):
-            lines.append(
-                f"| {source['name']} | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |"
-            )
-        elif source["ok"]:
-            lines.append(f"| {source['name']} | ✅ 成功 | `{source['used_url']}` |")
+            result = "📦 缓存沿用（本次未抓取成功）"
+        elif source.get("ok"):
+            result = "✅ 更新成功"
         else:
-            error = (source.get("error") or "").replace("|", "/")
+            error = (source.get("error") or "所有地址均失败").replace("|", "/")
             if len(error) > 100:
                 error = error[:97] + "..."
-            lines.append(f"| {source['name']} | ❌ 失败 | {error} |")
+            result = f"❌ 更新失败：{error}"
+        lines.append(f"| {source['name']} | {result} |")
 
-    # 在状态表后为每个源的主地址/备用地址生成独立的可复制代码框。
-    # GitHub 会在每个 Markdown 代码框右上角显示复制按钮。
-    lines.extend(["", "### 源配置链接（点击代码框右上角复制）", ""])
+    # 逐条检测所有主/备用地址，并为每条链接显示独立的可用性结果。
+    lines.extend([
+        "",
+        "### 源配置链接（每条地址单独检测，点击代码框右上角复制）",
+        "",
+        "> 可用性按 GitHub Actions 运行环境的 HTTP 检测结果判断；不同地区、运营商或客户端的访问结果可能不同。",
+        "",
+    ])
     for source in status["sources"]:
         source_urls = source.get("source_urls") or []
         used_url = source.get("used_url")
-        # 兼容没有 source_urls 字段的旧状态数据。
+        # 兼容旧状态数据。
         if not source_urls and used_url and used_url != "(缓存)":
             source_urls = [used_url]
         if not source_urls:
@@ -347,8 +354,17 @@ def update_readme(status, ok_count, total):
         lines.extend([f"**{source['name']}**", ""])
         for index, url in enumerate(source_urls, start=1):
             label = "配置地址" if len(source_urls) == 1 else f"地址 {index}"
+            check = check_http_url(str(url), timeout=5)
+            code = check.get("http_status")
+            if code is not None and 200 <= code < 300:
+                availability = f"✅ 可用（HTTP {code}）"
+            elif code is not None:
+                availability = f"❌ 不可用（HTTP {code}）"
+            else:
+                availability = f"❌ 不可用（{check.get('error') or '检测失败'}）"
+            print(f"[源链接检测] {source['name']} / {label}: {url} -> {availability}")
             lines.extend([
-                f"{label}",
+                f"**{label}：{availability}**",
                 "",
                 "```text",
                 str(url),
