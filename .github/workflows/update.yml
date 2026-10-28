@@ -44,6 +44,9 @@ jobs:
       - name: Run update script
         run: python scripts/update.py
 
+      - name: Apply source-specific JARs
+        run: python scripts/jar_patch.py
+
       - name: Commit and push changes
         run: |
           git config --local user.name "github-actions[bot]"
