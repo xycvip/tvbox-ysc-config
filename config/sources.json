@@ -49,7 +49,8 @@
       "id": "xiaosa",
       "name": "潇洒",
       "urls": [
-        ""
+        "",
+        "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json"
       ]
     }
   ]
