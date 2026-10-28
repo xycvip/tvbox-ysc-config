@@ -1,5 +1,5 @@
 {
-  "description": "影视仓 / TVBox 配置源列表（2026-10 更新）：替换失效域名，保留肥猫、饭太硬、王二小、老刘备、小马、讴歌、4K小盒子、小盒子单仓、拾光多仓、挺好分享多仓等公开接口",
+  "description": "影视仓 / TVBox 配置源列表（2026-10 更新）：替换失效域名，保留肥猫、饭太硬、王二小等公开接口",
   "update_interval_hours": 12,
   "sources": [
     {
@@ -29,20 +29,6 @@
       ]
     },
     {
-      "id": "laoliubei",
-      "name": "老刘备",
-      "urls": [
-        "https://raw.liucn.cc/box/m.json"
-      ]
-    },
-    {
-      "id": "xiaoma",
-      "name": "小马",
-      "urls": [
-        "https://szyyds.cn/tv/x.json"
-      ]
-    },
-    {
       "id": "moyuer",
       "name": "摸鱼儿",
       "urls": [
@@ -51,32 +37,19 @@
       ]
     },
     {
-      "id": "4k",
-      "name": "4K小盒子",
+      "id": "aowu",
+      "name": "嗷呜",
       "urls": [
-        "http://xhztv.top/4k.json",
-        "http://xhztv.top/xhz"
+        "http://www.英格里希嗷呜.top/tv",
+        "https://9763.kstore.vip/aowu.json",
+        "http://itv666.cc/aowu/config.webp"
       ]
     },
     {
-      "id": "xiaohezi",
-      "name": "小盒子单仓",
+      "id": "",
+      "name": "",
       "urls": [
-        "http://xhztv.top/xhz"
-      ]
-    },
-    {
-      "id": "shiguang",
-      "name": "拾光多仓",
-      "urls": [
-        "http://xmbjm.fh4u.org/dc.txt"
-      ]
-    },
-    {
-      "id": "tinghao",
-      "name": "挺好分享多仓",
-      "urls": [
-        "http://ztha.top/TVBox/GYCK.json"
+        ""
       ]
     }
   ]
