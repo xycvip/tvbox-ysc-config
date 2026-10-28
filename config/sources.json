@@ -44,6 +44,35 @@
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
       ]
+    },
+    {
+      "id": "laoliubei",
+      "name": "老刘备",
+      "urls": [
+        "https://raw.liucn.cc/box/m.json"
+      ]
+    },
+    {
+      "id": "xiaoma",
+      "name": "小马",
+      "urls": [
+        "https://szyyds.cn/tv/x.json"
+      ]
+    },
+    {
+      "id": "4k",
+      "name": "4K小盒子",
+      "urls": [
+        "http://xhztv.top/4k.json",
+        "http://xhztv.top/xhz"
+      ]
+    },
+    {
+      "id": "xiaohezi",
+      "name": "小盒子单仓",
+      "urls": [
+        "http://xhztv.top/xhz"
+      ]
     }
   ]
 }
