@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 15:12:51（北京时间） · 成功 **5/6** 个源
+> 🔄 最近更新：2026-10-28 15:16:11（北京时间） · 成功 **5/5** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -21,7 +21,6 @@
 | 王二小 | ✅ 更新成功 |
 | 摸鱼儿 | ✅ 更新成功 |
 | 嗷呜 | ✅ 更新成功 |
-|  | ❌ 更新失败：Invalid URL '': No scheme supplied. Perhaps you meant https://? |
 
 ### 源配置链接（每条地址单独检测，点击代码框右上角复制）
 
@@ -115,14 +114,6 @@ https://9763.kstore.vip/aowu.json
 http://itv666.cc/aowu/config.webp
 ```
 
-****
-
-**配置地址：❌ 不可用（连接失败：MissingSchema）**
-
-```text
-
-```
-
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -154,7 +145,7 @@ tvbox-ysc-config/
 
 ### 多仓订阅
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -190,7 +181,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 肥猫
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -276,24 +267,6 @@ https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
-```
-
-### 线路 · 
-
-**原始直链状态：❌ HTTP 404（地址不存在）**
-
-**原始直链**
-
-```text
-https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/.json
-```
-
-**代理链接状态：❌ HTTP 404（地址不存在）**
-
-**代理链接**
-
-```text
-https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/.json
 ```
 <!-- ARTIFACT_LINKS_END -->
 

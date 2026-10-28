@@ -1,0 +1,64 @@
+{
+  "updated_at": "2026-10-28 15:16:11",
+  "repo": "xycvip/tvbox-ysc-config",
+  "sources": [
+    {
+      "id": "feimao",
+      "name": "肥猫",
+      "ok": true,
+      "used_url": "http://肥猫.net/tv",
+      "error": null,
+      "source_urls": [
+        "http://肥猫.net/tv",
+        "http://肥猫.net/"
+      ]
+    },
+    {
+      "id": "fantaiying",
+      "name": "饭太硬",
+      "ok": true,
+      "used_url": "http://www.饭太硬.net/tv",
+      "error": null,
+      "source_urls": [
+        "http://www.饭太硬.net/tv",
+        "http://www.饭太硬.cc/tv",
+        "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
+      ]
+    },
+    {
+      "id": "wangerxiao",
+      "name": "王二小",
+      "ok": true,
+      "used_url": "https://d.kstore.dev/download/9280/wex.json",
+      "error": null,
+      "source_urls": [
+        "https://d.kstore.dev/download/9280/wex.json",
+        "https://9280.kstore.vip/newwex.json",
+        "http://new.王二小放牛娃.top"
+      ]
+    },
+    {
+      "id": "moyuer",
+      "name": "摸鱼儿",
+      "ok": true,
+      "used_url": "http://我不是.摸鱼儿.top",
+      "error": null,
+      "source_urls": [
+        "http://我不是.摸鱼儿.top",
+        "https://6800.kstore.vip/fish.json"
+      ]
+    },
+    {
+      "id": "aowu",
+      "name": "嗷呜",
+      "ok": true,
+      "used_url": "http://www.英格里希嗷呜.top/tv",
+      "error": null,
+      "source_urls": [
+        "http://www.英格里希嗷呜.top/tv",
+        "https://9763.kstore.vip/aowu.json",
+        "http://itv666.cc/aowu/config.webp"
+      ]
+    }
+  ]
+}
