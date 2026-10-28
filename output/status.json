@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 17:03:46",
+  "updated_at": "2026-10-28 17:20:26",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -58,6 +58,47 @@
         "http://www.英格里希嗷呜.top/tv",
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
+      ]
+    },
+    {
+      "id": "laoliubei",
+      "name": "老刘备",
+      "ok": true,
+      "used_url": "https://raw.liucn.cc/box/m.json",
+      "error": null,
+      "source_urls": [
+        "https://raw.liucn.cc/box/m.json"
+      ]
+    },
+    {
+      "id": "xiaoma",
+      "name": "小马",
+      "ok": true,
+      "used_url": "https://szyyds.cn/tv/x.json",
+      "error": null,
+      "source_urls": [
+        "https://szyyds.cn/tv/x.json"
+      ]
+    },
+    {
+      "id": "4k",
+      "name": "4K小盒子",
+      "ok": true,
+      "used_url": "http://xhztv.top/4k.json",
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/4k.json",
+        "http://xhztv.top/xhz"
+      ]
+    },
+    {
+      "id": "xiaohezi",
+      "name": "小盒子单仓",
+      "ok": true,
+      "used_url": "http://xhztv.top/xhz",
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/xhz"
       ]
     }
   ]

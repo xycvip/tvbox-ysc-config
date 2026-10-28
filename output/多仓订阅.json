@@ -19,6 +19,22 @@
     {
       "name": "嗷呜",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json"
+    },
+    {
+      "name": "老刘备",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json"
+    },
+    {
+      "name": "小马",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json"
+    },
+    {
+      "name": "4K小盒子",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json"
+    },
+    {
+      "name": "小盒子单仓",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json"
     }
   ]
 }
