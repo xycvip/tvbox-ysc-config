@@ -1,0 +1,113 @@
+{
+  "updated_at": "2026-10-28 14:04:33",
+  "repo": "xycvip/tvbox-ysc-config",
+  "sources": [
+    {
+      "id": "feimao",
+      "name": "肥猫",
+      "ok": true,
+      "used_url": "http://肥猫.net/tv",
+      "error": null,
+      "source_urls": [
+        "http://肥猫.net/tv",
+        "http://肥猫.net/"
+      ]
+    },
+    {
+      "id": "fantaiying",
+      "name": "饭太硬",
+      "ok": true,
+      "used_url": "http://www.饭太硬.net/tv",
+      "error": null,
+      "source_urls": [
+        "http://www.饭太硬.net/tv",
+        "http://www.饭太硬.cc/tv",
+        "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
+      ]
+    },
+    {
+      "id": "wangerxiao",
+      "name": "王二小",
+      "ok": true,
+      "used_url": "https://d.kstore.dev/download/9280/wex.json",
+      "error": null,
+      "source_urls": [
+        "https://d.kstore.dev/download/9280/wex.json",
+        "https://9280.kstore.vip/newwex.json",
+        "http://new.王二小放牛娃.top"
+      ]
+    },
+    {
+      "id": "laoliubei",
+      "name": "老刘备",
+      "ok": true,
+      "used_url": "https://raw.liucn.cc/box/m.json",
+      "error": null,
+      "source_urls": [
+        "https://raw.liucn.cc/box/m.json"
+      ]
+    },
+    {
+      "id": "xiaoma",
+      "name": "小马",
+      "ok": true,
+      "used_url": "https://szyyds.cn/tv/x.json",
+      "error": null,
+      "source_urls": [
+        "https://szyyds.cn/tv/x.json"
+      ]
+    },
+    {
+      "id": "moyuer",
+      "name": "摸鱼儿",
+      "ok": true,
+      "used_url": "http://我不是.摸鱼儿.top",
+      "error": null,
+      "source_urls": [
+        "http://我不是.摸鱼儿.top",
+        "https://6800.kstore.vip/fish.json"
+      ]
+    },
+    {
+      "id": "4k",
+      "name": "4K小盒子",
+      "ok": true,
+      "used_url": "http://xhztv.top/4k.json",
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/4k.json",
+        "http://xhztv.top/xhz"
+      ]
+    },
+    {
+      "id": "xiaohezi",
+      "name": "小盒子单仓",
+      "ok": true,
+      "used_url": "http://xhztv.top/xhz",
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/xhz"
+      ]
+    },
+    {
+      "id": "shiguang",
+      "name": "拾光多仓",
+      "ok": true,
+      "used_url": "http://xmbjm.fh4u.org/dc.txt",
+      "error": null,
+      "source_urls": [
+        "http://xmbjm.fh4u.org/dc.txt"
+      ]
+    },
+    {
+      "id": "tinghao",
+      "name": "挺好分享多仓",
+      "ok": true,
+      "used_url": "http://ztha.top/TVBox/GYCK.json",
+      "error": null,
+      "source_urls": [
+        "http://ztha.top/TVBox/GYCK.json"
+      ]
+    }
+  ]
+}

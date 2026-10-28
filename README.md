@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 14:00:16（北京时间） · 成功 **10/10** 个源
+> 🔄 最近更新：2026-10-28 14:04:33（北京时间） · 成功 **10/10** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -184,7 +184,7 @@ tvbox-ysc-config/
 
 ### 多仓订阅
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -192,7 +192,7 @@ tvbox-ysc-config/
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -202,7 +202,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 单仓聚合
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -210,7 +210,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -220,7 +220,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 肥猫
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -228,7 +228,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -238,7 +238,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 饭太硬
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -246,7 +246,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -256,7 +256,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 王二小
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -264,7 +264,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -274,7 +274,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 老刘备
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -282,7 +282,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -292,7 +292,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 小马
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -300,7 +300,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -310,7 +310,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 摸鱼儿
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -318,7 +318,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -328,7 +328,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 4K小盒子
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -336,7 +336,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -346,7 +346,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 小盒子单仓
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -354,7 +354,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -364,7 +364,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 拾光多仓
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -372,7 +372,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/shiguang.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
@@ -382,7 +382,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 挺好分享多仓
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
@@ -390,7 +390,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/tinghao.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
