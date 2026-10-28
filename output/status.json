@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 12:29:54",
+  "updated_at": "2026-10-28 12:34:27",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -17,7 +17,7 @@
       "id": "fantaiying",
       "name": "饭太硬",
       "ok": true,
-      "used_url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
+      "used_url": "http://www.饭太硬.net/tv",
       "error": null,
       "source_urls": [
         "http://www.饭太硬.net/tv",
@@ -61,7 +61,7 @@
       "id": "moyuer",
       "name": "摸鱼儿",
       "ok": true,
-      "used_url": "https://6800.kstore.vip/fish.json",
+      "used_url": "http://我不是.摸鱼儿.top",
       "error": null,
       "source_urls": [
         "http://我不是.摸鱼儿.top",
