@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 16:44:41",
+  "updated_at": "2026-10-28 16:50:29",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -67,7 +67,6 @@
       "used_url": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json",
       "error": null,
       "source_urls": [
-        "",
         "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json"
       ]
     }

@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 16:44:41（北京时间） · 成功 **6/6** 个源
+> 🔄 最近更新：2026-10-28 16:50:29（北京时间） · 成功 **6/6** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -117,13 +117,7 @@ http://itv666.cc/aowu/config.webp
 
 **潇洒**
 
-**地址 1：❌ 不可用（连接失败：MissingSchema）**
-
-```text
-
-```
-
-**地址 2：✅ 可用（HTTP 200）**
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json
