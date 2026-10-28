@@ -283,22 +283,44 @@ def merge_configs(fetched):
     )
 
     seen_keys, sites = set(), []
-    for sid, _name, data in fetched:
-        for site in data.get("sites", []) or []:
-            if not isinstance(site, dict):
+    for sid, source_name, data in fetched:
+        for source_site in data.get("sites", []) or []:
+            if not isinstance(source_site, dict):
                 continue
-            key = site.get("key")
+
+            key = source_site.get("key")
             if key is None:
-                key = json.dumps(site, ensure_ascii=False, sort_keys=True)
+                key = json.dumps(
+                    source_site,
+                    ensure_ascii=False,
+                    sort_keys=True
+                )
+
             new_key = key
             if key in seen_keys:
                 new_key = f"{sid}_{key}"
             if new_key in seen_keys:
                 continue
             seen_keys.add(new_key)
+
+            # 复制站点，避免修改原始独立线路配置
+            site = dict(source_site)
+
+            # 所有站点名称统一添加线路前缀
+            current_name = site.get("name")
+            if isinstance(current_name, str) and current_name.strip():
+                # 去除已有的线路前缀，避免重复添加
+                display_name = re.sub(
+                    r"^[^|]+\\|",
+                    "",
+                    current_name
+                )
+                site["name"] = f"{source_name}|{display_name}"
+
+            # 保留原来的重复 key 处理逻辑
             if new_key != key:
-                site = dict(site)
                 site["key"] = new_key
+
             sites.append(site)
     merged["sites"] = sites
     for field in ("lives", "parses", "doh", "rules", "flags", "exts"):
