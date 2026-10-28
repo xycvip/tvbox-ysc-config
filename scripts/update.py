@@ -28,7 +28,7 @@ OUTPUT_DIR = os.path.join(ROOT, "output")
 README_PATH = os.path.join(ROOT, "README.md")
 
 DEFAULT_REPO = "xycvip/tvbox-ysc-config"
-USER_AGENT = "Mozilla/5.0"
+USER_AGENT = "okhttp/3.14.9"
 TIMEOUT = 20
 MAX_RETRIES = 2
 RETRY_BACKOFF = 2
