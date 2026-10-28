@@ -4029,7 +4029,7 @@
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "配置中心",
@@ -4043,14 +4043,14 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "本地",
       "name": "潇洒|本地 • 视频",
       "type": 3,
       "api": "csp_LocalFile",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "预告",
@@ -4058,7 +4058,7 @@
       "type": 3,
       "api": "csp_YGP",
       "searchable": 0,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "热播影视",
@@ -4071,7 +4071,7 @@
       "ext": {
         "url": "http://v.rbotv.cn"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "一起影视",
@@ -4081,7 +4081,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_咕噜",
@@ -4091,7 +4091,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "布布",
@@ -4109,7 +4109,7 @@
         "client": "8f3d2a1c7b6e5d4c9a0b1f2e3d4c5b6a",
         "sign": "ddtvf65f3a83d6d9ad6f"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_马猴影视",
@@ -4126,14 +4126,14 @@
         "sk": "SK-woniu-thanks",
         "ver": "1"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_韩圈",
       "name": "潇洒|韩圈 • APP",
       "type": 3,
       "api": "csp_Hxq",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "剧圈99",
@@ -4148,7 +4148,7 @@
         "buildNumber": "2002",
         "buildSignature": "054FA8DDA4319C6B6A9B954CA5777541C993F00B1B0BD4394F7EDE48184C4594"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "半日99",
@@ -4163,7 +4163,7 @@
         "buildNumber": "2001",
         "buildSignature": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "天堂",
@@ -4184,7 +4184,7 @@
         "version": "3.0.0.7",
         "decrypt": "0"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "橘汁",
@@ -4205,7 +4205,7 @@
         "version": "3.0.2.4",
         "decrypt": "1"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "华谊",
@@ -4226,7 +4226,7 @@
         "version": "6.0.0.1",
         "decrypt": "0"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "苹果",
@@ -4247,7 +4247,7 @@
         "version": "1.0.0.3",
         "decrypt": "0"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "蓝鹰",
@@ -4263,7 +4263,7 @@
         "init": "initV122",
         "ua": "okhttp/3.10.0"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "蓝鸟",
@@ -4279,7 +4279,7 @@
         "init": "initV122",
         "ua": "okhttp/3.10.0"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "王子",
@@ -4293,7 +4293,7 @@
         "dataKey": "5a9w6x58dsq6z3a6",
         "dataIv": "5a9w6x58dsq6z3a6"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "茉莉Get",
@@ -4307,7 +4307,7 @@
         "dataKey": "88689667dce61725",
         "dataIv": "88689667dce61725"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩合集",
@@ -4326,7 +4326,7 @@
         "n": "哔哩合集",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩视频",
@@ -4344,14 +4344,14 @@
       "ext": {
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "三六零",
       "name": "潇洒|三六零 • 视频",
       "type": 3,
       "api": "csp_SP360",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_玩偶",
@@ -4371,7 +4371,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "快映",
@@ -4389,7 +4389,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "木偶",
@@ -4409,7 +4409,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "闪电",
@@ -4426,7 +4426,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "蜡笔",
@@ -4446,7 +4446,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_多多",
@@ -4465,7 +4465,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "八零",
@@ -4484,7 +4484,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "虎斑",
@@ -4502,7 +4502,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "花卷",
@@ -4520,7 +4520,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "种子",
@@ -4538,7 +4538,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "搬运",
@@ -4549,7 +4549,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "指南",
@@ -4565,7 +4565,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "小丑",
@@ -4581,7 +4581,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "茉莉",
@@ -4598,7 +4598,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "爱盼",
@@ -4609,7 +4609,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "移动",
@@ -4620,7 +4620,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "即刻",
@@ -4634,7 +4634,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_双星",
@@ -4648,7 +4648,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "卡卡",
@@ -4662,7 +4662,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "红果短剧",
@@ -4677,7 +4677,7 @@
       "type": 3,
       "api": "csp_ShortQimao",
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "河马短剧",
@@ -4685,7 +4685,7 @@
       "type": 3,
       "api": "csp_ShortHema",
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "围观短剧",
@@ -4693,7 +4693,7 @@
       "type": 3,
       "api": "csp_ShortWeiguan",
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "好看短剧",
@@ -4701,7 +4701,7 @@
       "type": 3,
       "api": "csp_ShortHaokan",
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "星芽短剧",
@@ -4709,7 +4709,7 @@
       "type": 3,
       "api": "csp_ShortXingya",
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "果果短剧",
@@ -4723,14 +4723,14 @@
         "分类url": "https://www.mochadj.com/i/{cateId}-{catePg}.html"
       },
       "genre": "shortdrama",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "飞娱影视",
       "name": "潇洒|飞娱 • 影视",
       "type": 3,
       "api": "csp_Feiyu",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "旺旺影视",
@@ -4738,21 +4738,21 @@
       "type": 3,
       "api": "csp_Wwys",
       "ext": "https://vip.wwgz.cn:5200",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "独播影视",
       "name": "潇洒|独播 • 影视",
       "type": 3,
       "api": "csp_Duboku",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "瓜子影视",
       "name": "潇洒|瓜子 • 影视",
       "type": 3,
       "api": "csp_Gz360",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "厂长影视",
@@ -4763,7 +4763,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://cz01.vip",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "金牌影视",
@@ -4771,7 +4771,7 @@
       "type": 3,
       "api": "csp_Jpys",
       "ext": "https://y2s52n7.com,https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "骚火影视",
@@ -4779,7 +4779,7 @@
       "type": 3,
       "api": "csp_SaoHuo",
       "ext": "https://shdy5.us",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "枫叶影视",
@@ -4787,7 +4787,7 @@
       "type": 3,
       "api": "csp_FengYe",
       "ext": "https://www.vip1949.com/",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "爱看机器人",
@@ -4797,7 +4797,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "面包影视",
@@ -4811,7 +4811,7 @@
         "分类": "电影$20#电视剧$21#动漫$23#综艺$22#短剧$47",
         "简介": "简介：&&"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "1905",
@@ -4821,7 +4821,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "番社动漫",
@@ -4849,7 +4849,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "巴士动漫",
@@ -4868,14 +4868,14 @@
         "搜索url": "https://dmbus.cc/s----------.html?wd={wd}",
         "倒序": "1"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_荐片",
       "name": "潇洒|荐片 • 磁力",
       "api": "csp_JianPian",
       "type": 3,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "New6v",
@@ -4886,7 +4886,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://www.xb6v.com",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "美剧迷",
@@ -4896,7 +4896,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "迅雷吧",
@@ -4907,7 +4907,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://xunlei8.me",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "阿里云盘",
@@ -4921,7 +4921,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "夸克网盘",
@@ -4935,7 +4935,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "UC网盘",
@@ -4949,7 +4949,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "百度网盘",
@@ -4963,7 +4963,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "迅雷云盘",
@@ -4977,7 +4977,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "光鸭云盘",
@@ -4991,7 +4991,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "天翼云盘",
@@ -5005,7 +5005,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "123云盘",
@@ -5019,7 +5019,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "觅盘",
@@ -5030,7 +5030,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "盘搜",
@@ -5041,7 +5041,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "酷乐",
@@ -5052,7 +5052,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "百酷",
@@ -5063,7 +5063,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "趣盘",
@@ -5074,7 +5074,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "88看球",
@@ -5087,7 +5087,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "飞球体育",
@@ -5100,7 +5100,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "瓜子体育",
@@ -5113,7 +5113,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "咖啡体育",
@@ -5126,7 +5126,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "球通体育",
@@ -5139,7 +5139,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "呦呦DJ",
@@ -5152,7 +5152,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "蜻蜓FM",
@@ -5165,7 +5165,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "听友听书",
@@ -5178,7 +5178,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "世界听书",
@@ -5201,7 +5201,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "博看听书",
@@ -5214,7 +5214,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "戏曲多多",
@@ -5227,7 +5227,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "童趣",
@@ -5241,7 +5241,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "兔小贝",
@@ -5255,7 +5255,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "贝乐虎",
@@ -5269,7 +5269,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩哔哩音乐",
@@ -5287,7 +5287,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩哔哩听书",
@@ -5305,7 +5305,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩哔哩相声",
@@ -5323,7 +5323,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩哔哩小品",
@@ -5341,7 +5341,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "哔哩哔哩戏曲",
@@ -5359,7 +5359,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_少儿教育",
@@ -5377,7 +5377,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_小学课堂",
@@ -5395,7 +5395,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_初中课堂",
@@ -5413,7 +5413,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "高中课堂",
@@ -5431,7 +5431,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "急救教学",
@@ -5446,7 +5446,7 @@
         "ratio": 3.8
       },
       "gridview": "0-0-4.1",
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "养生堂",
@@ -5460,7 +5460,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     },
     {
       "key": "xiaosa_push_agent",
@@ -5471,7 +5471,7 @@
       "filterable": 0,
       "changeable": 0,
       "hide": 1,
-      "jar": "./spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
+      "jar": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/spider.jar;md5;c1978e5cec469f66f07efd37d39ec26a"
     }
   ],
   "lives": [
