@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 16:38:19",
+  "updated_at": "2026-10-28 16:42:55",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -64,11 +64,12 @@
       "id": "xiaosa",
       "name": "潇洒",
       "ok": true,
-      "used_url": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json",
-      "error": null,
+      "used_url": "(缓存)",
+      "error": "Invalid URL '': No scheme supplied. Perhaps you meant https://?",
       "source_urls": [
-        "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json"
-      ]
+        ""
+      ],
+      "cached": true
     }
   ]
 }
