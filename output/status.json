@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 16:50:29",
+  "updated_at": "2026-10-28 17:03:46",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -58,16 +58,6 @@
         "http://www.英格里希嗷呜.top/tv",
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
-      ]
-    },
-    {
-      "id": "xiaosa",
-      "name": "潇洒",
-      "ok": true,
-      "used_url": "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json",
-      "error": null,
-      "source_urls": [
-        "https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json"
       ]
     }
   ]

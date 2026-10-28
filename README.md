@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 16:50:29（北京时间） · 成功 **6/6** 个源
+> 🔄 最近更新：2026-10-28 17:03:46（北京时间） · 成功 **5/5** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -21,7 +21,6 @@
 | 王二小 | ✅ 更新成功 |
 | 摸鱼儿 | ✅ 更新成功 |
 | 嗷呜 | ✅ 更新成功 |
-| 潇洒 | ✅ 更新成功 |
 
 ### 源配置链接（每条地址单独检测，点击代码框右上角复制）
 
@@ -113,14 +112,6 @@ https://9763.kstore.vip/aowu.json
 
 ```text
 http://itv666.cc/aowu/config.webp
-```
-
-**潇洒**
-
-**配置地址：✅ 可用（HTTP 200）**
-
-```text
-https://gh-proxy.com/raw.githubusercontent.com/qist/tvbox/refs/heads/master/xiaosa/api.json
 ```
 
 <!-- STATUS_END -->
@@ -276,24 +267,6 @@ https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
-```
-
-### 线路 · 潇洒
-
-**原始直链状态：✅ HTTP 200**
-
-**原始直链**
-
-```text
-https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
-```
-
-**代理链接状态：✅ HTTP 200**
-
-**代理链接**
-
-```text
-https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 <!-- ARTIFACT_LINKS_END -->
 
