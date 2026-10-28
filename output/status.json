@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 12:14:09",
+  "updated_at": "2026-10-28 12:21:00",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -18,7 +18,7 @@
       "id": "fantaiying",
       "name": "饭太硬",
       "ok": true,
-      "used_url": "http://www.饭太硬.net/tv",
+      "used_url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
       "error": null,
       "source_urls": [
         "http://www.饭太硬.net/tv",

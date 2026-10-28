@@ -12,38 +12,40 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 12:14:09（北京时间） · 成功 **10/10** 个源
+> 🔄 最近更新：2026-10-28 12:21:00（北京时间） · 成功 **10/10** 个源
 
-| 配置源 | 状态 | 使用地址 |
-| --- | --- | --- |
-| 肥猫 | ✅ 成功 | `http://肥猫.net/tv` |
-| 饭太硬 | ✅ 成功 | `http://www.饭太硬.net/tv` |
-| 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
-| 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
-| 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
-| 讴歌 | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |
-| 4K小盒子 | ✅ 成功 | `http://xhztv.top/4k.json` |
-| 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
-| 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
-| 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
+| 配置源 | 更新状态 |
+| --- | --- |
+| 肥猫 | ✅ 更新成功 |
+| 饭太硬 | ✅ 更新成功 |
+| 王二小 | ✅ 更新成功 |
+| 老刘备 | ✅ 更新成功 |
+| 小马 | ✅ 更新成功 |
+| 讴歌 | 📦 缓存沿用（本次未抓取成功） |
+| 4K小盒子 | ✅ 更新成功 |
+| 小盒子单仓 | ✅ 更新成功 |
+| 拾光多仓 | ✅ 更新成功 |
+| 挺好分享多仓 | ✅ 更新成功 |
 
-### 源配置链接（点击代码框右上角复制）
+### 源配置链接（每条地址单独检测，点击代码框右上角复制）
+
+> 可用性按 GitHub Actions 运行环境的 HTTP 检测结果判断；不同地区、运营商或客户端的访问结果可能不同。
 
 **肥猫**
 
-地址 1
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
 http://肥猫.net/tv
 ```
 
-地址 2
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
 http://肥猫.com/
 ```
 
-地址 3
+**地址 3：❌ 不可用（HTTP 401）**
 
 ```text
 https://6296.kstore.vip/facat.json
@@ -51,19 +53,19 @@ https://6296.kstore.vip/facat.json
 
 **饭太硬**
 
-地址 1
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
 http://www.饭太硬.net/tv
 ```
 
-地址 2
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
 http://www.饭太硬.cc/tv
 ```
 
-地址 3
+**地址 3：✅ 可用（HTTP 200）**
 
 ```text
 https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp
@@ -71,19 +73,19 @@ https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp
 
 **王二小**
 
-地址 1
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
 https://d.kstore.dev/download/9280/wex.json
 ```
 
-地址 2
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
 https://9280.kstore.vip/newwex.json
 ```
 
-地址 3
+**地址 3：✅ 可用（HTTP 200）**
 
 ```text
 http://new.王二小放牛娃.top
@@ -91,7 +93,7 @@ http://new.王二小放牛娃.top
 
 **老刘备**
 
-配置地址
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 https://raw.liucn.cc/box/m.json
@@ -99,7 +101,7 @@ https://raw.liucn.cc/box/m.json
 
 **小马**
 
-配置地址
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 https://szyyds.cn/tv/x.json
@@ -107,13 +109,13 @@ https://szyyds.cn/tv/x.json
 
 **讴歌**
 
-地址 1
+**地址 1：❌ 不可用（HTTP 403）**
 
 ```text
 http://tv.nxog.top/m/
 ```
 
-地址 2
+**地址 2：❌ 不可用（连接失败：SSLError）**
 
 ```text
 https://欧歌.v.nxog.top/m/
@@ -121,13 +123,13 @@ https://欧歌.v.nxog.top/m/
 
 **4K小盒子**
 
-地址 1
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
 http://xhztv.top/4k.json
 ```
 
-地址 2
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
 http://xhztv.top/xhz
@@ -135,7 +137,7 @@ http://xhztv.top/xhz
 
 **小盒子单仓**
 
-配置地址
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 http://xhztv.top/xhz
@@ -143,7 +145,7 @@ http://xhztv.top/xhz
 
 **拾光多仓**
 
-配置地址
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 http://xmbjm.fh4u.org/dc.txt
@@ -151,7 +153,7 @@ http://xmbjm.fh4u.org/dc.txt
 
 **挺好分享多仓**
 
-配置地址
+**配置地址：✅ 可用（HTTP 200）**
 
 ```text
 http://ztha.top/TVBox/GYCK.json
@@ -437,7 +439,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ```bash
 pip install -r requirements.txt
-REPO=Lightconer/tvbox-ysc-config python scripts/update.py
+REPO=xycvip/tvbox-ysc-config python scripts/update.py
 ```
 
 ## 七、脚本特性
