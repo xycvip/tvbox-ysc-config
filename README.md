@@ -9,6 +9,12 @@
 
 ---
 
+**一键订阅：✅ 可用（HTTP 200）**
+
+```text
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
+```
+
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
