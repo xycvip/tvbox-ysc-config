@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 12:21:00（北京时间） · 成功 **10/10** 个源
+> 🔄 最近更新：2026-10-28 12:29:54（北京时间） · 成功 **10/10** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -21,7 +21,7 @@
 | 王二小 | ✅ 更新成功 |
 | 老刘备 | ✅ 更新成功 |
 | 小马 | ✅ 更新成功 |
-| 讴歌 | 📦 缓存沿用（本次未抓取成功） |
+| 摸鱼儿 | ✅ 更新成功 |
 | 4K小盒子 | ✅ 更新成功 |
 | 小盒子单仓 | ✅ 更新成功 |
 | 拾光多仓 | ✅ 更新成功 |
@@ -42,13 +42,7 @@ http://肥猫.net/tv
 **地址 2：✅ 可用（HTTP 200）**
 
 ```text
-http://肥猫.com/
-```
-
-**地址 3：❌ 不可用（HTTP 401）**
-
-```text
-https://6296.kstore.vip/facat.json
+http://肥猫.net/
 ```
 
 **饭太硬**
@@ -107,18 +101,18 @@ https://raw.liucn.cc/box/m.json
 https://szyyds.cn/tv/x.json
 ```
 
-**讴歌**
+**摸鱼儿**
 
-**地址 1：❌ 不可用（HTTP 403）**
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
-http://tv.nxog.top/m/
+http://我不是.摸鱼儿.top
 ```
 
-**地址 2：❌ 不可用（连接失败：SSLError）**
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
-https://欧歌.v.nxog.top/m/
+https://6800.kstore.vip/fish.json
 ```
 
 **4K小盒子**
@@ -314,22 +308,22 @@ https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.jso
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
 ```
 
-### 线路 · 讴歌
+### 线路 · 摸鱼儿
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
 ```text
-https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/ouge.json
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
 ```text
-https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/ouge.json
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
 ```
 
 ### 线路 · 4K小盒子
