@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 11:57:35",
+  "updated_at": "2026-10-28 12:14:09",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -7,35 +7,56 @@
       "name": "肥猫",
       "ok": true,
       "used_url": "http://肥猫.net/tv",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://肥猫.net/tv",
+        "http://肥猫.com/",
+        "https://6296.kstore.vip/facat.json"
+      ]
     },
     {
       "id": "fantaiying",
       "name": "饭太硬",
       "ok": true,
       "used_url": "http://www.饭太硬.net/tv",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://www.饭太硬.net/tv",
+        "http://www.饭太硬.cc/tv",
+        "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
+      ]
     },
     {
       "id": "wangerxiao",
       "name": "王二小",
       "ok": true,
       "used_url": "https://d.kstore.dev/download/9280/wex.json",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "https://d.kstore.dev/download/9280/wex.json",
+        "https://9280.kstore.vip/newwex.json",
+        "http://new.王二小放牛娃.top"
+      ]
     },
     {
       "id": "laoliubei",
       "name": "老刘备",
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "https://raw.liucn.cc/box/m.json"
+      ]
     },
     {
       "id": "xiaoma",
       "name": "小马",
       "ok": true,
       "used_url": "https://szyyds.cn/tv/x.json",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "https://szyyds.cn/tv/x.json"
+      ]
     },
     {
       "id": "ouge",
@@ -43,6 +64,10 @@
       "ok": true,
       "used_url": "(缓存)",
       "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1016)')))",
+      "source_urls": [
+        "http://tv.nxog.top/m/",
+        "https://欧歌.v.nxog.top/m/"
+      ],
       "cached": true
     },
     {
@@ -50,28 +75,41 @@
       "name": "4K小盒子",
       "ok": true,
       "used_url": "http://xhztv.top/4k.json",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/4k.json",
+        "http://xhztv.top/xhz"
+      ]
     },
     {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
       "used_url": "http://xhztv.top/xhz",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://xhztv.top/xhz"
+      ]
     },
     {
       "id": "shiguang",
       "name": "拾光多仓",
       "ok": true,
       "used_url": "http://xmbjm.fh4u.org/dc.txt",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://xmbjm.fh4u.org/dc.txt"
+      ]
     },
     {
       "id": "tinghao",
       "name": "挺好分享多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
-      "error": null
+      "error": null,
+      "source_urls": [
+        "http://ztha.top/TVBox/GYCK.json"
+      ]
     }
   ]
 }

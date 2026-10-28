@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 11:57:35（北京时间） · 成功 **10/10** 个源
+> 🔄 最近更新：2026-10-28 12:14:09（北京时间） · 成功 **10/10** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -26,6 +26,137 @@
 | 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
 | 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
 | 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
+
+### 源配置链接（点击代码框右上角复制）
+
+**肥猫**
+
+地址 1
+
+```text
+http://肥猫.net/tv
+```
+
+地址 2
+
+```text
+http://肥猫.com/
+```
+
+地址 3
+
+```text
+https://6296.kstore.vip/facat.json
+```
+
+**饭太硬**
+
+地址 1
+
+```text
+http://www.饭太硬.net/tv
+```
+
+地址 2
+
+```text
+http://www.饭太硬.cc/tv
+```
+
+地址 3
+
+```text
+https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp
+```
+
+**王二小**
+
+地址 1
+
+```text
+https://d.kstore.dev/download/9280/wex.json
+```
+
+地址 2
+
+```text
+https://9280.kstore.vip/newwex.json
+```
+
+地址 3
+
+```text
+http://new.王二小放牛娃.top
+```
+
+**老刘备**
+
+配置地址
+
+```text
+https://raw.liucn.cc/box/m.json
+```
+
+**小马**
+
+配置地址
+
+```text
+https://szyyds.cn/tv/x.json
+```
+
+**讴歌**
+
+地址 1
+
+```text
+http://tv.nxog.top/m/
+```
+
+地址 2
+
+```text
+https://欧歌.v.nxog.top/m/
+```
+
+**4K小盒子**
+
+地址 1
+
+```text
+http://xhztv.top/4k.json
+```
+
+地址 2
+
+```text
+http://xhztv.top/xhz
+```
+
+**小盒子单仓**
+
+配置地址
+
+```text
+http://xhztv.top/xhz
+```
+
+**拾光多仓**
+
+配置地址
+
+```text
+http://xmbjm.fh4u.org/dc.txt
+```
+
+**挺好分享多仓**
+
+配置地址
+
+```text
+http://ztha.top/TVBox/GYCK.json
+```
+
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -111,7 +242,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 饭太硬
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -119,7 +250,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
