@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 01:58:22",
+  "updated_at": "2026-10-28 11:16:51",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -14,7 +14,7 @@
       "name": "饭太硬",
       "ok": false,
       "used_url": null,
-      "error": "HTTPConnectionPool(host='www.xn--sss604efuw.xyz', port=80): Max retries exceeded with url: /tv (Caused by NameResolutionError(\"HTTPConnection(host='www.xn--sss604efuw.xyz', port=80): Failed to resolve 'www.xn--sss604efuw.xyz' ([Errno -2] Name or service not known)\"))"
+      "error": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "id": "wangerxiao",
