@@ -12,7 +12,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-10-28 17:20:26（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-10-28 17:22:18（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -38,7 +38,7 @@
 http://肥猫.net/tv
 ```
 
-**地址 2：❌ 不可用（请求超时）**
+**地址 2：✅ 可用（HTTP 200）**
 
 ```text
 http://肥猫.net/
@@ -313,7 +313,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 老刘备
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -321,7 +321,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
@@ -331,7 +331,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 小马
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -339,7 +339,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
@@ -349,7 +349,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 4K小盒子
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -357,7 +357,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
@@ -367,7 +367,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 小盒子单仓
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -375,7 +375,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
