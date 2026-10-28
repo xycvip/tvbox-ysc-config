@@ -54,7 +54,6 @@ def parse_json_lenient(text):
     try:
         return json.loads(text, strict=False)
     except json.JSONDecodeError:
-        # 某些接口在 JSON 后附加少量字符；只取开头完整 JSON 对象/数组。
         obj, _ = json.JSONDecoder(strict=False).raw_decode(text)
         return obj
 
@@ -82,10 +81,8 @@ def idn_encode(url):
 def is_valid_tvbox_config(data):
     if not isinstance(data, dict):
         return False
-    # 单仓常见结构
     if any(key in data for key in TVBOX_KEYS):
         return True
-    # 多仓订阅必须是非空 urls 数组，元素通常为对象或字符串
     urls = data.get("urls")
     return isinstance(urls, list) and bool(urls)
 
@@ -96,7 +93,6 @@ def _looks_like_json(raw):
 
 
 def _parse_json_bytes(raw):
-    # UTF-8 BOM 兼容；TVBox 配置通常是 UTF-8 JSON 文本。
     text = raw.decode("utf-8-sig", errors="strict")
     return parse_json_lenient(text)
 
@@ -106,10 +102,8 @@ def _decode_base64_candidate(payload):
     payload = payload.strip()
     if not payload:
         return None
-    # 分隔符后可能有换行/空格，也可能有少量尾部空白。
     candidates = [payload, b"".join(payload.split())]
     for candidate in candidates:
-        # 只尝试看起来像 Base64 的内容；避免大段图片二进制误解码。
         if len(candidate) < 16:
             continue
         try:
@@ -130,7 +124,6 @@ def _parse_image_wrapped_config(raw):
     兼容部分公开 TVBox 源的图片伪装方式。
     已知一种方式是在 JPEG EOI (FF D9) 后追加内容，并以 ** 分隔后跟 Base64 JSON。
     也会扫描完整响应，以兼容其他图片头；最终仍必须通过 JSON 结构校验。
-    这不是对所有 .bmp 源的保证，格式不匹配时会返回明确错误。
     """
     payloads = []
     eoi = raw.find(b"\xff\xd9")
@@ -164,7 +157,6 @@ def _response_diagnostic(resp, raw):
     preview = " ".join(preview.split())
     if not preview:
         preview = repr(preview_bytes)
-    # 只打印短预览，避免把整份配置或敏感内容写进日志。
     return (
         f"HTTP={resp.status_code}; final_url={resp.url}; "
         f"Content-Type={resp.headers.get('Content-Type', '')!r}; "
@@ -341,6 +333,29 @@ def update_readme(status, ok_count, total):
                 error = error[:97] + "..."
             lines.append(f"| {source['name']} | ❌ 失败 | {error} |")
 
+    # 在状态表后为每个源的主地址/备用地址生成独立的可复制代码框。
+    # GitHub 会在每个 Markdown 代码框右上角显示复制按钮。
+    lines.extend(["", "### 源配置链接（点击代码框右上角复制）", ""])
+    for source in status["sources"]:
+        source_urls = source.get("source_urls") or []
+        used_url = source.get("used_url")
+        # 兼容没有 source_urls 字段的旧状态数据。
+        if not source_urls and used_url and used_url != "(缓存)":
+            source_urls = [used_url]
+        if not source_urls:
+            continue
+        lines.extend([f"**{source['name']}**", ""])
+        for index, url in enumerate(source_urls, start=1):
+            label = "配置地址" if len(source_urls) == 1 else f"地址 {index}"
+            lines.extend([
+                f"{label}",
+                "",
+                "```text",
+                str(url),
+                "```",
+                "",
+            ])
+
     block = "\n".join(lines)
     prefix = readme.split(STATUS_START, 1)[0]
     suffix = readme.split(STATUS_END, 1)[1]
@@ -448,6 +463,8 @@ def main():
         entry = {
             "id": sid, "name": name, "ok": False,
             "used_url": None, "error": None,
+            # 将主地址和备用地址写入状态，供 README 生成可复制代码框。
+            "source_urls": urls,
         }
         saved = False
 
