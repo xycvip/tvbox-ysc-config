@@ -1,5 +1,5 @@
 {
-  "spider": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de",
+  "spider": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676",
   "danmaku": "http://127.0.0.1:9978/proxy?do=danmaku&name={name}&episode={episode}",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "logo": "http://w.junce.dpdns.org/fm.gif",
@@ -45,7 +45,7 @@
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "豆瓣预告",
@@ -54,7 +54,7 @@
       "api": "csp_YGP",
       "playerType": 2,
       "searchable": 0,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "config",
@@ -62,7 +62,7 @@
       "type": 3,
       "api": "csp_Config",
       "playerType": 2,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "alllive",
@@ -79,7 +79,7 @@
       "quickSearch": 0,
       "changeable": 0,
       "ext": "game",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_FeiMaoUC",
@@ -98,7 +98,7 @@
         },
         "url_key": "FeiMaoUC"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "潮流",
@@ -106,7 +106,7 @@
       "type": 3,
       "api": "csp_AppRJ",
       "ext": "http://v.rbotv.cn",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "肥猫",
@@ -114,7 +114,7 @@
       "type": 3,
       "api": "csp_AppQi",
       "ext": "https://lanyingjisu.oss-cn-wuhan-lr.aliyuncs.com/lyjszx.txt|oW5UxZ5kWVr1DI69",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "干饭",
@@ -132,7 +132,7 @@
         "version": "1.0.0.3",
         "decrypt": "0"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "光盘",
@@ -140,7 +140,7 @@
       "type": 3,
       "api": "csp_AppQi",
       "ext": "http://103.217.190.91:5566|hagYExMdMkeWfemK",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "行动",
@@ -158,7 +158,7 @@
         "version": "6.0.0.1",
         "decrypt": "1"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "再来",
@@ -176,7 +176,7 @@
         "version": "3.0.0.7",
         "decrypt": "0"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "一碗",
@@ -194,14 +194,14 @@
         "version": "3.0.2.4",
         "decrypt": "1"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "韩圈",
       "name": "肥猫|⭕┃韩圈 ┃APP",
       "type": 3,
       "api": "csp_Hxq",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "一起",
@@ -211,7 +211,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "咕噜",
@@ -221,7 +221,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "蔬菜",
@@ -229,7 +229,7 @@
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://allinadmin.oss-cn-hangzhou.aliyuncs.com/bk/9.txt|88689667dce61725",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_Jpys",
@@ -237,7 +237,7 @@
       "type": 3,
       "api": "csp_Jpys",
       "ext": "https://y2s52n7.com",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "荐片",
@@ -246,7 +246,7 @@
       "type": 3,
       "playerType": "2",
       "ext": "https://api.ztcgi.com",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_SaoHuo",
@@ -255,7 +255,7 @@
       "api": "csp_SaoHuo",
       "playerType": 2,
       "ext": "https://shdy5.us",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_Gz360",
@@ -263,7 +263,7 @@
       "type": 3,
       "api": "csp_Gz360",
       "playerType": 2,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "厂长",
@@ -275,14 +275,14 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://www.4kcz.com/",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_SP360",
       "name": "肥猫|📺┃360┃官源",
       "type": 3,
       "api": "csp_SP360",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_Bili",
@@ -298,7 +298,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_Dm84",
@@ -307,7 +307,7 @@
       "playerType": "2",
       "api": "csp_Dm84",
       "ext": "https://dm84.net",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "方舟",
@@ -315,7 +315,7 @@
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://www.cyfz.top|e72cdfd629e8895d",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "番薯",
@@ -323,7 +323,7 @@
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://app.omofun1.top|66dc309cbeeca454",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_FirstAid",
@@ -337,7 +337,7 @@
         "ratio": 3.8
       },
       "gridview": "0-0-4.1",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "酷狗",
@@ -353,7 +353,7 @@
           }
         ]
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "MTV",
@@ -369,7 +369,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "看球",
@@ -383,7 +383,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "瓜子",
@@ -400,7 +400,7 @@
       "timeout": 12,
       "order_num": 0,
       "changeable": 0,
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "米搜",
@@ -408,7 +408,7 @@
       "type": 3,
       "api": "csp_MiSou",
       "ext": "http://127.0.0.1:9978/file/fatcat/kk.txt",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_PanSearch",
@@ -416,7 +416,7 @@
       "type": 3,
       "api": "csp_PanSearch",
       "ext": "http://127.0.0.1:9978/file/fatcat/token.txt",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "儿童",
@@ -446,7 +446,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_小学",
@@ -462,7 +462,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_初中",
@@ -478,7 +478,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "csp_高中",
@@ -494,7 +494,7 @@
         "type": "rect",
         "ratio": 1.333
       },
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "push_agent",
@@ -504,7 +504,7 @@
       "playerType": "1",
       "searchable": 0,
       "ext": ".json/txt/ken.txt",
-      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261029/56AM/0X0/ash54.png;md5;cd1e8ad50504d324a55a9187b95cd3de"
+      "jar": "https://ss1.eisite.cn/autoupload/f/eja2s/20261030/V47C/0X0/wer.png;md5;efdab3edef534eb3d98706f0023a8676"
     },
     {
       "key": "点我切源",
