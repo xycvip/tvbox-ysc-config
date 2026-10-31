@@ -2653,9 +2653,8 @@
       "genre": "shortdrama",
       "filterable": 1,
       "ext": {
-        "host": "https://short.fishcloud.top",
-        "quality": "1080p",
-        "danmu": false
+        "host": "https://honhon.wya6.com",
+        "quality": "1080p"
       },
       "jar": "https://qiniu.gongxueyun.com/upload/8921029/2026-10-29/leave/859245561_2_1793314126675.jar;md5;7bfeff4e4cbc5d2868e8cd6b298c495c"
     },
