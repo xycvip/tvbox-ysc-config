@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 17:01:03",
+  "updated_at": "2026-11-04 04:25:24",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -7,7 +7,7 @@
       "name": "肥猫",
       "ok": true,
       "used_url": "(缓存)",
-      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=http://xn--z7x900a.net/; Content-Type='application/json; charset=utf-8'; Content-Disposition=''; bytes=24476; preview='24236f73316d6565356276303163692324dbf796e28c2ec13dee08d916822300aab14ff7ed1b86820a41c8f00c7dec1f'",
+      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=http://xn--z7x900a.net/; Content-Type='application/json; charset=utf-8'; Content-Disposition=''; bytes=24572; preview='24233338626f69306361376a306c382324ef8a8abb3b15e44c97e0b35acf1938bafb9d3ea297356b1e0c06398d50abc2'",
       "source_urls": [
         "http://肥猫.net/tv",
         "http://肥猫.net/"
