@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-03 06:36:21（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-03 17:01:03（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -38,7 +38,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 **肥猫**
 
-**地址 1：✅ 可用（HTTP 200）**
+**地址 1：❌ 不可用（HTTP 404）**
 
 ```text
 http://肥猫.net/tv
