@@ -6,8 +6,9 @@
       "id": "feimao",
       "name": "肥猫",
       "urls": [
-        "http://肥猫.net/tv",
-        "http://肥猫.net/"
+        "http://hello.肥猫.net/",
+        "http://肥猫.net/",
+        "http://w.junce.dpdns.org/fm.gif"
       ]
     },
     {
@@ -33,6 +34,7 @@
       "name": "摸鱼儿",
       "urls": [
         "http://我不是.摸鱼儿.top",
+        "http://我不是.摸鱼儿.cc/",
         "https://6800.kstore.vip/fish.json"
       ]
     },
@@ -68,10 +70,10 @@
       ]
     },
     {
-      "id": "xiaohezi",
-      "name": "小盒子单仓",
+      "id": "xiaosa",
+      "name": "潇洒",
       "urls": [
-        "http://xhztv.top/xhz"
+        "https://9877.kstore.space/sun.json"
       ]
     }
   ]
