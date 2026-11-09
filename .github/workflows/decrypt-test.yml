@@ -93,6 +93,10 @@ jobs:
           mod = importlib.util.module_from_spec(spec)
           spec.loader.exec_module(mod)
 
+          # Internationalized domain names are normalized before urllib receives the URL.
+          assert mod.normalize_source_url("http://www.饭太硬.net/tv") == "http://www.xn--sss604efuw.net/tv"
+          assert mod.normalize_source_url("https://例子.测试/路径?q=中文") == "https://xn--fsqu00a.xn--0zwm56d/%E8%B7%AF%E5%BE%84?q=%E4%B8%AD%E6%96%87"
+
           message = b'{"sites":[{"key":"offline-test"}]}'
           key = "0123456789abcdef"
           iv = "abcdef0123456789"
