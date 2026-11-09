@@ -149,6 +149,75 @@ def _parse_image_wrapped_config(raw):
     raise ValueError("没有找到可解码的 '**' + Base64 JSON 载荷")
 
 
+FATCAT_API_URL = "https://xn--z7x900a.net/api/parse"
+FATCAT_TOOL_URL = "https://xn--z7x900a.net/tool"
+
+
+def _parse_fatcat_result(result):
+    """提取肥猫 /api/parse 返回的明文 JSON，并再次校验 TVBox 结构。"""
+    if not isinstance(result, dict):
+        raise ValueError("肥猫接口返回的不是 JSON 对象")
+
+    candidates = [result]
+    for key in ("data", "result", "payload"):
+        value = result.get(key)
+        if isinstance(value, dict):
+            candidates.append(value)
+
+    api_error = result.get("error") or result.get("message")
+    for item in candidates:
+        if "json" not in item:
+            continue
+        value = item.get("json")
+        if isinstance(value, str):
+            data = parse_json_lenient(value)
+        elif isinstance(value, dict):
+            data = value
+        else:
+            continue
+        if is_valid_tvbox_config(data):
+            return data
+        raise ValueError("肥猫接口返回了内容，但缺少 TVBox 配置关键字段")
+
+    if api_error:
+        raise ValueError(f"肥猫接口错误：{api_error}")
+    raise ValueError("肥猫接口响应中没有找到 data.json")
+
+
+def fetch_via_fatcat(url):
+    """
+    调用肥猫在线解析服务作为兜底解密方式。
+    该接口由肥猫服务器下载原始 URL 并完成解码/解密，工作流只接收明文 JSON。
+    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; TVBoxConfigUpdater/1.0)",
+        "Accept": "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+        "X-Requested-With": "fetch",
+        "Origin": "https://xn--z7x900a.net",
+        "Referer": FATCAT_TOOL_URL,
+    }
+    resp = requests.post(
+        FATCAT_API_URL,
+        headers=headers,
+        json={"url": url, "content": ""},
+        timeout=60,
+    )
+    if not resp.ok:
+        preview = " ".join(resp.text[:300].split())
+        raise ValueError(
+            f"肥猫接口 HTTP {resp.status_code}：{preview or '无错误详情'}"
+        )
+    try:
+        result = resp.json()
+    except ValueError as exc:
+        preview = " ".join(resp.text[:300].split())
+        raise ValueError(
+            f"肥猫接口没有返回 JSON：{preview or '响应为空'}"
+        ) from exc
+    return _parse_fatcat_result(result)
+
+
 def _response_diagnostic(resp, raw):
     if resp is None:
         return "没有收到 HTTP 响应"
@@ -210,10 +279,17 @@ def fetch_config(url):
                     print(f"      [解码] 图片伪装配置解析成功：{url}")
                     return data
             except Exception as wrapped_exc:
-                raise ValueError(
-                    f"{direct_error}；伪装载荷解析失败：{wrapped_exc}；"
-                    f"响应诊断：{_response_diagnostic(resp, raw)}"
-                ) from wrapped_exc
+                print(f"      [在线解密] 本地解析未命中，尝试肥猫 /api/parse：{url}")
+                try:
+                    data = fetch_via_fatcat(url)
+                    print(f"      [在线解密] 肥猫接口解析成功：{url}")
+                    return data
+                except Exception as api_exc:
+                    raise ValueError(
+                        f"{direct_error}；本地伪装载荷解析失败：{wrapped_exc}；"
+                        f"肥猫在线解密失败：{api_exc}；"
+                        f"响应诊断：{_response_diagnostic(resp, raw)}"
+                    ) from api_exc
 
         except Exception as exc:
             last_err = exc
