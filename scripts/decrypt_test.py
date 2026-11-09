@@ -106,7 +106,7 @@ def strip_json_comments(text):
             out.append(char)
             if escaped:
                 escaped = False
-            elif char == "\\\\":
+            elif char == "\\":
                 escaped = True
             elif char == '"':
                 in_string = False
@@ -118,21 +118,20 @@ def strip_json_comments(text):
             i += 1
         elif char == "/" and nxt == "/":
             i += 2
-            while i < len(text) and text[i] not in "\\r\\n":
+            while i < len(text) and text[i] not in "\r\n":
                 i += 1
         elif char == "/" and nxt == "*":
             i += 2
             while i < len(text) and not (text[i] == "*" and i + 1 < len(text) and text[i + 1] == "/"):
-                if text[i] in "\\r\\n":
+                if text[i] in "\r\n":
                     out.append(text[i])
                 i += 1
             i = min(i + 2, len(text))
         else:
             out.append(char)
             i += 1
-    # TVBox config sources commonly use JSONC-style trailing commas.
     cleaned = "".join(out)
-    return re.sub(r',\\s*([}\\]])', r'\\1', cleaned)
+    return re.sub(r',\s*([}\]])', r'\1', cleaned)
 
 
 def try_json(data):
@@ -142,7 +141,6 @@ def try_json(data):
         return value if isinstance(value, (dict, list)) else None
     except Exception:
         return None
-
 
 def b64decode_flexible(value):
     value = re.sub(r"\s+", "", value).replace("_", "/").replace("-", "+")
