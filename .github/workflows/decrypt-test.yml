@@ -98,6 +98,11 @@ jobs:
           assert mod.normalize_source_url("https://例子.测试/路径?q=中文") == "https://xn--fsqu00a.xn--0zwm56d/%E8%B7%AF%E5%BE%84?q=%E4%B8%AD%E6%96%87"
 
           message = b'{"sites":[{"key":"offline-test"}]}'
+          # TVBox feeds may contain JSONC comments and trailing commas.
+          jsonc = b'{\\n  // comment\\n  "url":"https://example.com/a//b",\\n  "sites":[{"key":"offline-test",}],\\n}'
+          parsed_jsonc = mod.try_json(jsonc)
+          assert parsed_jsonc and parsed_jsonc["url"] == "https://example.com/a//b"
+          assert mod.is_tvbox_json(parsed_jsonc)
           key = "0123456789abcdef"
           iv = "abcdef0123456789"
 
@@ -136,7 +141,7 @@ jobs:
           # Binary image input must pass through to the image-wrapper detector.
           assert mod.decrypt_tvbox_marked_hex(b"\\xff\\xd8\\xff\\xd9**") is None
 
-          print("SELF_TEST_OK: AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt, TVBoxOS marked HEX/AES-CBC")
+          print("SELF_TEST_OK: JSONC, AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt, TVBoxOS marked HEX/AES-CBC")
           PY
 
       - name: Run offline decrypt test
