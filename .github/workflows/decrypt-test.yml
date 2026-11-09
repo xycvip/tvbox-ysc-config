@@ -144,7 +144,13 @@ jobs:
           print("SELF_TEST_OK: JSONC, AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt, TVBoxOS marked HEX/AES-CBC")
           PY
 
+      - name: Check every link in config JSON files
+        run: |
+          python -m py_compile scripts/check_config_links.py
+          python scripts/check_config_links.py
+
       - name: Run offline decrypt test
+        if: ${{ inputs.source_url != '' || inputs.payload != '' }}
         env:
           SOURCE_URL: ${{ inputs.source_url }}
           PAYLOAD: ${{ inputs.payload }}
@@ -162,9 +168,6 @@ jobs:
             args+=(--url "$SOURCE_URL")
           elif [[ -n "$PAYLOAD" ]]; then
             args+=(--payload "$PAYLOAD")
-          else
-            echo "::error::请填写 source_url 或 payload"
-            exit 1
           fi
           if [[ "$RSA_LONG" == "true" ]]; then
             args+=(--rsa-long)
@@ -176,6 +179,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: offline-decrypt-result
-          path: decrypt-output/
+          path: |
+            decrypt-output/
+            link-check-output/
           if-no-files-found: ignore
           retention-days: 3
