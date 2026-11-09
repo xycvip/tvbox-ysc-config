@@ -93,9 +93,52 @@ def is_tvbox_json(value):
     )
 
 
+def strip_json_comments(text):
+    """Remove // and /* */ comments while preserving quoted strings and line breaks."""
+    out = []
+    i = 0
+    in_string = False
+    escaped = False
+    while i < len(text):
+        char = text[i]
+        nxt = text[i + 1] if i + 1 < len(text) else ""
+        if in_string:
+            out.append(char)
+            if escaped:
+                escaped = False
+            elif char == "\\\\":
+                escaped = True
+            elif char == '"':
+                in_string = False
+            i += 1
+            continue
+        if char == '"':
+            in_string = True
+            out.append(char)
+            i += 1
+        elif char == "/" and nxt == "/":
+            i += 2
+            while i < len(text) and text[i] not in "\\r\\n":
+                i += 1
+        elif char == "/" and nxt == "*":
+            i += 2
+            while i < len(text) and not (text[i] == "*" and i + 1 < len(text) and text[i + 1] == "/"):
+                if text[i] in "\\r\\n":
+                    out.append(text[i])
+                i += 1
+            i = min(i + 2, len(text))
+        else:
+            out.append(char)
+            i += 1
+    # TVBox config sources commonly use JSONC-style trailing commas.
+    cleaned = "".join(out)
+    return re.sub(r',\\s*([}\\]])', r'\\1', cleaned)
+
+
 def try_json(data):
     try:
-        value = json.loads(data.decode("utf-8-sig").strip())
+        text = data.decode("utf-8-sig").strip()
+        value = json.loads(strip_json_comments(text))
         return value if isinstance(value, (dict, list)) else None
     except Exception:
         return None
