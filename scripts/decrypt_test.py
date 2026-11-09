@@ -135,10 +135,28 @@ def rsa_decrypt(data, key_text, key_type, long_mode):
         raise ValueError(f"RSA 密文长度 {len(data)} 不是模数块长 {block_size} 的整数倍")
     if not long_mode and len(data) > block_size:
         raise ValueError("密文超过单个 RSA 块，请开启分段解密")
-    cipher = PKCS1_v1_5.new(key)
     result = []
     for offset in range(0, len(data), block_size):
-        chunk = cipher.decrypt(data[offset:offset + block_size], None)
+        block = data[offset:offset + block_size]
+        if key.has_private():
+            cipher = PKCS1_v1_5.new(key)
+            chunk = cipher.decrypt(block, None)
+        else:
+            # TVBoxOS Crypto.rsa(pub=true, encrypt=false) also exposes public-key
+            # decrypt. Reproduce the RSA public operation and remove PKCS#1 v1.5
+            # type-1/type-2 block padding locally.
+            value = pow(int.from_bytes(block, "big"), key.e, key.n)
+            encoded = value.to_bytes(block_size, "big")
+            if encoded[:2] not in (b"\\x00\\x01", b"\\x00\\x02"):
+                chunk = None
+            else:
+                sep = encoded.find(b"\\x00", 2)
+                padding = encoded[2:sep] if sep >= 0 else b""
+                valid_padding = len(padding) >= 8 and (
+                    (encoded[1] == 1 and all(byte == 0xff for byte in padding))
+                    or (encoded[1] == 2 and all(byte != 0 for byte in padding))
+                )
+                chunk = encoded[sep + 1:] if valid_padding else None
         if chunk is None:
             raise ValueError(f"RSA 第 {offset // block_size + 1} 块解密失败")
         result.append(chunk)
@@ -181,17 +199,17 @@ def main():
     elif try_json(raw) is not None and args.algorithm in ("auto", "base64"):
         detected = "plain-json"
 
-    if detected != "plain-json" and args.algorithm == "base64":
+    if detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm == "base64":
         plain = b64decode_flexible(raw.decode("utf-8-sig"))
         detected = "Base64"
-    elif detected != "plain-json" and args.algorithm.startswith("aes-"):
+    elif detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm.startswith("aes-"):
         mode = "ECB" if "ecb" in args.algorithm else "CBC"
         flavor = "tvbox" if args.algorithm.endswith("-tvbox") else "cryptox"
         fmt = "hex" if flavor == "tvbox" else args.input_format
         cipher_bytes = decode_cipher_input(raw.decode("utf-8-sig"), fmt)
         plain = aes_decrypt(cipher_bytes, args.aes_key, args.aes_iv, mode, flavor)
         detected = f"AES-{mode}-{flavor}"
-    elif detected != "plain-json" and args.algorithm == "rsa":
+    elif detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm == "rsa":
         cipher_bytes = b64decode_flexible(raw.decode("utf-8-sig"))
         plain = rsa_decrypt(cipher_bytes, args.rsa_key, args.rsa_key_type, args.rsa_long)
         detected = f"RSA-PKCS1-{args.rsa_key_type}"
