@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-10 00:38:28（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-10 00:46:22（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -385,7 +385,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 潇洒
 
-**原始直链状态：❌ HTTP 404（地址不存在）**
+**原始直链状态：✅ HTTP 200**
 
 **原始直链**
 
@@ -393,7 +393,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 
-**代理链接状态：❌ HTTP 404（地址不存在）**
+**代理链接状态：✅ HTTP 200**
 
 **代理链接**
 
