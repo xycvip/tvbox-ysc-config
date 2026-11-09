@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-10 00:35:57",
+  "updated_at": "2026-11-10 00:38:28",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "http://w.junce.dpdns.org/fm.gif",
+      "used_url": "http://hello.肥猫.net/",
       "error": null,
       "source_urls": [
         "http://hello.肥猫.net/",
@@ -96,9 +96,9 @@
     {
       "id": "xiaosa",
       "name": "潇洒",
-      "ok": false,
-      "used_url": null,
-      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：HTTPSConnectionPool(host='xn--z7x900a.net', port=443): Max retries exceeded with url: /api/parse (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'xn--z7x900a.net'. (_ssl.c:1018)\")))；响应诊断：HTTP=200; final_url=https://9877.kstore.space/sun.json; Content-Type='text/plain'; Content-Disposition=''; bytes=56380; preview='2423313233343536373839303132332324af8a71deeab615a1157e323453cf5e61902629c1c791b822ba8fc559da30d5'",
+      "ok": true,
+      "used_url": "https://9877.kstore.space/sun.json",
+      "error": null,
       "source_urls": [
         "https://9877.kstore.space/sun.json"
       ]

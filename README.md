@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-10 00:35:57（北京时间） · 成功 **8/9** 个源
+> 🔄 最近更新：2026-11-10 00:38:28（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -30,7 +30,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 | 老刘备 | ✅ 更新成功 |
 | 小马 | ✅ 更新成功 |
 | 4K小盒子 | ✅ 更新成功 |
-| 潇洒 | ❌ 更新失败：响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：HTTPSConnectio... |
+| 潇洒 | ✅ 更新成功 |
 
 ### 源配置链接（每条地址单独检测，点击代码框右上角复制）
 

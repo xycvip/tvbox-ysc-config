@@ -31,6 +31,10 @@
     {
       "name": "4K小盒子",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json"
+    },
+    {
+      "name": "潇洒",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json"
     }
   ]
 }
