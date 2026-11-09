@@ -15,7 +15,7 @@ ROOT = Path("config")
 OUT = Path("link-check-output")
 TIMEOUT = 15
 MAX_SAMPLE = 4096
-URL_RE = re.compile(r"https?://[^\s"'<>]+", re.IGNORECASE)
+URL_RE = re.compile(r"https?://[^\s\"'<>]+", re.IGNORECASE)
 
 # First attempt resembles the HTTP headers commonly sent by Android OkHttp.
 OKHTTP_HEADERS = {
