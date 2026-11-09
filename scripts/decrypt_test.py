@@ -8,6 +8,8 @@ import json
 import os
 import re
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -15,14 +17,70 @@ MAX_DOWNLOAD = 12 * 1024 * 1024
 TVBOX_KEYS = ("sites", "spiders", "lives", "store", "exts", "parses", "flags")
 
 
+def normalize_source_url(url):
+    """Convert an internationalized hostname to IDNA and quote Unicode URL parts."""
+    value = url.strip()
+    if not value:
+        raise ValueError("源 URL 为空")
+    if any(ord(char) < 32 for char in value):
+        raise ValueError("源 URL 含有换行或控制字符，请检查输入")
+    try:
+        parsed = urllib.parse.urlsplit(value)
+        scheme = parsed.scheme.lower()
+        if scheme not in ("http", "https"):
+            raise ValueError("源 URL 只支持 http:// 或 https://")
+        hostname = parsed.hostname
+        if not hostname:
+            raise ValueError("源 URL 缺少有效域名")
+        try:
+            port = parsed.port
+        except ValueError as exc:
+            raise ValueError(f"源 URL 端口无效：{exc}") from exc
+
+        # IPv6 literals must remain bracketed; DNS names use IDNA/Punycode.
+        if ":" in hostname:
+            host_ascii = f"[{hostname}]"
+        else:
+            try:
+                host_ascii = hostname.encode("idna").decode("ascii")
+            except UnicodeError as exc:
+                raise ValueError(f"中文域名转换失败：{exc}") from exc
+
+        userinfo = ""
+        if parsed.username is not None:
+            userinfo = urllib.parse.quote(parsed.username, safe="!$&'()*+,;=:")
+            if parsed.password is not None:
+                userinfo += ":" + urllib.parse.quote(parsed.password, safe="!$&'()*+,;=:")
+            userinfo += "@"
+        netloc = userinfo + host_ascii
+        if port is not None:
+            netloc += f":{port}"
+
+        path = urllib.parse.quote(parsed.path or "/", safe="/%:@!$&'()*+,;=-._~")
+        query = urllib.parse.quote(parsed.query, safe="/?%:@!$&'()*+,;=-._~[]")
+        return urllib.parse.urlunsplit((scheme, netloc, path, query, ""))
+    except ValueError:
+        raise
+    except Exception as exc:
+        raise ValueError(f"源 URL 格式无效：{exc}") from exc
+
+
 def fetch_input(url):
-    req = urllib.request.Request(url, headers={
+    normalized_url = normalize_source_url(url)
+    req = urllib.request.Request(normalized_url, headers={
         "User-Agent": "okhttp/3.14.9",
         "Accept": "*/*",
         "Accept-Encoding": "identity",
     })
-    with urllib.request.urlopen(req, timeout=25) as response:
-        data = response.read(MAX_DOWNLOAD + 1)
+    try:
+        with urllib.request.urlopen(req, timeout=25) as response:
+            data = response.read(MAX_DOWNLOAD + 1)
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(f"源站返回 HTTP {exc.code} {exc.reason}") from exc
+    except urllib.error.URLError as exc:
+        raise RuntimeError(f"源站连接失败：{exc.reason}") from exc
+    except TimeoutError as exc:
+        raise RuntimeError("连接源站超时（25 秒）") from exc
     if len(data) > MAX_DOWNLOAD:
         raise ValueError("源文件超过 12 MB 限制")
     return data
@@ -44,14 +102,14 @@ def try_json(data):
 
 
 def b64decode_flexible(value):
-    value = re.sub(r"\s+", "", value).replace("_", "/").replace("-", "+")
+    value = re.sub(r"\\s+", "", value).replace("_", "/").replace("-", "+")
     value += "=" * ((4 - len(value) % 4) % 4)
     return base64.b64decode(value, validate=True)
 
 
 def extract_wrapped_base64(raw):
     candidates = []
-    eoi = raw.find(b"\xff\xd9")
+    eoi = raw.find(b"\\xff\\xd9")
     if eoi >= 0:
         candidates.append(raw[eoi + 2:])
     candidates.append(raw)
@@ -73,17 +131,17 @@ def extract_wrapped_base64(raw):
 
 def decrypt_tvbox_marked_hex(raw):
     """Reproduce TVBoxOS ApiConfig.FindResult() for 2423... hex-wrapped configs."""
-    text = re.sub(r"\s+", "", raw.decode("utf-8-sig").strip())
+    text = re.sub(r"\\s+", "", raw.decode("utf-8-sig").strip())
     if not text.startswith("2423"):
         return None
     if not re.fullmatch(r"[0-9a-fA-F]+", text) or len(text) % 2:
         raise ValueError("检测到 2423 标记，但外层内容不是完整 HEX")
     decoded = bytes.fromhex(text).decode("latin1")
-    marker = re.match(r"^\$#(\d{13})#\$", decoded)
+    marker = re.match(r"^\\$#(\\d{13})#\\$", decoded)
     if not marker:
         raise ValueError("检测到 2423 HEX 外壳，但缺少 TVBoxOS 的 $#{13位数字}#$ 标记")
     iv_text = decoded[-13:]
-    if not re.fullmatch(r"\d{13}", iv_text):
+    if not re.fullmatch(r"\\d{13}", iv_text):
         raise ValueError("TVBoxOS 标记数据末尾缺少 13 位数字 IV")
     marker_end = text.lower().find("2324")
     if marker_end < 0:
@@ -100,7 +158,7 @@ def decrypt_tvbox_marked_hex(raw):
 def decode_cipher_input(text, input_format):
     cleaned = text.strip()
     if input_format == "hex":
-        return bytes.fromhex(re.sub(r"\s+", "", cleaned))
+        return bytes.fromhex(re.sub(r"\\s+", "", cleaned))
     if input_format == "base64":
         return b64decode_flexible(cleaned)
     if input_format == "text":
@@ -109,7 +167,7 @@ def decode_cipher_input(text, input_format):
         return b64decode_flexible(cleaned)
     except Exception:
         pass
-    compact = re.sub(r"\s+", "", cleaned)
+    compact = re.sub(r"\\s+", "", cleaned)
     if re.fullmatch(r"(?:[0-9a-fA-F]{2})+", compact):
         return bytes.fromhex(compact)
     return cleaned.encode("utf-8")
@@ -130,10 +188,10 @@ def aes_decrypt(data, key, iv, mode, flavor):
         iv_bytes = iv.encode("utf-8")
     else:
         if len(key_bytes) < 16:
-            key_bytes = key_bytes.ljust(16, b"\0")
+            key_bytes = key_bytes.ljust(16, b"\\0")
         iv_bytes = iv.encode("utf-8") if iv else b""
         if iv and len(iv_bytes) < 16:
-            iv_bytes = iv_bytes.ljust(16, b"\0")
+            iv_bytes = iv_bytes.ljust(16, b"\\0")
 
     if len(key_bytes) not in (16, 24, 32):
         raise ValueError(f"AES key 长度无效：{len(key_bytes)} 字节")
@@ -168,15 +226,12 @@ def rsa_decrypt(data, key_text, key_type, long_mode):
             cipher = PKCS1_v1_5.new(key)
             chunk = cipher.decrypt(block, None)
         else:
-            # TVBoxOS Crypto.rsa(pub=true, encrypt=false) also exposes public-key
-            # decrypt. Reproduce the RSA public operation and remove PKCS#1 v1.5
-            # type-1/type-2 block padding locally.
             value = pow(int.from_bytes(block, "big"), key.e, key.n)
             encoded = value.to_bytes(block_size, "big")
-            if encoded[:2] not in (b"\x00\x01", b"\x00\x02"):
+            if encoded[:2] not in (b"\\x00\\x01", b"\\x00\\x02"):
                 chunk = None
             else:
-                sep = encoded.find(b"\x00", 2)
+                sep = encoded.find(b"\\x00", 2)
                 padding = encoded[2:sep] if sep >= 0 else b""
                 valid_padding = len(padding) >= 8 and (
                     (encoded[1] == 1 and all(byte == 0xff for byte in padding))
@@ -208,7 +263,7 @@ def main():
 
     if args.url:
         raw = fetch_input(args.url)
-        source = args.url
+        source = normalize_source_url(args.url)
     elif args.payload:
         raw = args.payload.encode("utf-8")
         source = "workflow_dispatch payload"
