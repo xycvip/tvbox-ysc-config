@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-09 23:45:51（北京时间） · 成功 **8/9** 个源
+> 🔄 最近更新：2026-11-10 00:35:57（北京时间） · 成功 **8/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -30,7 +30,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 | 老刘备 | ✅ 更新成功 |
 | 小马 | ✅ 更新成功 |
 | 4K小盒子 | ✅ 更新成功 |
-| 潇洒 | ❌ 更新失败：响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=... |
+| 潇洒 | ❌ 更新失败：响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：HTTPSConnectio... |
 
 ### 源配置链接（每条地址单独检测，点击代码框右上角复制）
 
@@ -90,7 +90,7 @@ https://d.kstore.dev/download/9280/wex.json
 https://9280.kstore.vip/newwex.json
 ```
 
-**地址 3：❌ 不可用（请求超时）**
+**地址 3：✅ 可用（HTTP 200）**
 
 ```text
 http://new.王二小放牛娃.top
