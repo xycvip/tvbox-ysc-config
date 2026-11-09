@@ -15,7 +15,7 @@ ROOT = Path("config")
 OUT = Path("link-check-output")
 TIMEOUT = 15
 MAX_SAMPLE = 4096
-URL_RE = re.compile(r"https?://[^\\s\"'<>]+", re.IGNORECASE)
+URL_RE = re.compile(r"https?://[^\s"'<>]+", re.IGNORECASE)
 
 # First attempt resembles the HTTP headers commonly sent by Android OkHttp.
 OKHTTP_HEADERS = {
@@ -224,12 +224,12 @@ def main():
             f"{url.replace('|', '%7C')} | {elapsed} | {retry} | "
             f"{str(detail).replace('|', '/')} |"
         )
-    (OUT / "config-link-report.md").write_text("\\n".join(lines) + "\\n", encoding="utf-8")
-    print("\\n".join(lines))
-    print(f"\\nREPORT_JSON={OUT / 'config-link-report.json'}")
+    (OUT / "config-link-report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+    print(f"\nREPORT_JSON={OUT / 'config-link-report.json'}")
     print(f"REPORT_MD={OUT / 'config-link-report.md'}")
     if failed:
-        print(f"\\nLINK_CHECK_FAILED: {failed} link occurrence(s) returned an error.")
+        print(f"\nLINK_CHECK_FAILED: {failed} link occurrence(s) returned an error.")
         sys.exit(2)
 
 
