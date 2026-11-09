@@ -681,8 +681,6 @@ def main():
 
     total = len(cfg.get("sources", []))
     write_badge(ok_count, total)
-    update_readme(status, ok_count, total)
-    update_artifact_links(cfg, repo)
 
     print("\n" + "=" * 50)
     print(f"本次更新：{ok_count}/{total} 个源成功")
@@ -693,5 +691,24 @@ def main():
     return 0
 
 
+def finalize_link_checks():
+    """在来源文件及聚合文件（包括 JAR 修正）全部生成后，最后检测链接并更新 README。"""
+    with open(CONFIG_FILE, "r", encoding="utf-8") as file:
+        cfg = json.load(file)
+    with open(os.path.join(OUTPUT_DIR, "status.json"), "r", encoding="utf-8") as file:
+        status = json.load(file)
+
+    total = len(cfg.get("sources", []))
+    ok_count = sum(1 for source in status.get("sources", []) if source.get("ok"))
+    repo = (os.environ.get("GITHUB_REPOSITORY")
+            or os.environ.get("REPO") or DEFAULT_REPO)
+
+    update_readme(status, ok_count, total)
+    update_artifact_links(cfg, repo)
+
+
 if __name__ == "__main__":
+    if "--finalize" in sys.argv[1:]:
+        finalize_link_checks()
+        sys.exit(0)
     sys.exit(main())
