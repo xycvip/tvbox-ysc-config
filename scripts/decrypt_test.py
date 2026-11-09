@@ -71,6 +71,32 @@ def extract_wrapped_base64(raw):
     return None
 
 
+def decrypt_tvbox_marked_hex(raw):
+    """Reproduce TVBoxOS ApiConfig.FindResult() for 2423... hex-wrapped configs."""
+    text = re.sub(r"\\s+", "", raw.decode("utf-8-sig").strip())
+    if not text.startswith("2423"):
+        return None
+    if not re.fullmatch(r"[0-9a-fA-F]+", text) or len(text) % 2:
+        raise ValueError("检测到 2423 标记，但外层内容不是完整 HEX")
+    decoded = bytes.fromhex(text).decode("latin1")
+    marker = re.match(r"^\\$#(\\d{13})#\\$", decoded)
+    if not marker:
+        raise ValueError("检测到 2423 HEX 外壳，但缺少 TVBoxOS 的 $#{13位数字}#$ 标记")
+    iv_text = decoded[-13:]
+    if not re.fullmatch(r"\\d{13}", iv_text):
+        raise ValueError("TVBoxOS 标记数据末尾缺少 13 位数字 IV")
+    marker_end = text.lower().find("2324")
+    if marker_end < 0:
+        raise ValueError("TVBoxOS HEX 数据缺少 2324 分隔符")
+    cipher_hex = text[marker_end + 4:-26]
+    if not cipher_hex or len(cipher_hex) % 32:
+        raise ValueError("TVBoxOS AES-CBC 密文长度异常，无法按 16 字节分块")
+    key = marker.group(1).ljust(16, "0")[:16]
+    iv = iv_text.ljust(16, "0")[:16]
+    plain = aes_decrypt(bytes.fromhex(cipher_hex), key, iv, "CBC", "tvbox")
+    return plain
+
+
 def decode_cipher_input(text, input_format):
     cleaned = text.strip()
     if input_format == "hex":
@@ -168,7 +194,7 @@ def main():
     p.add_argument("--url", default="")
     p.add_argument("--payload", default="")
     p.add_argument("--algorithm", required=True, choices=(
-        "auto", "base64", "aes-ecb-tvbox", "aes-cbc-tvbox",
+        "auto", "base64", "tvbox-marked-cbc", "aes-ecb-tvbox", "aes-cbc-tvbox",
         "aes-ecb-cryptox", "aes-cbc-cryptox", "rsa"))
     p.add_argument("--input-format", default="auto", choices=("auto", "base64", "hex", "text"))
     p.add_argument("--aes-key", default=os.getenv("AES_KEY", ""))
@@ -193,23 +219,29 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     plain = raw
     detected = "raw"
-    wrapped = extract_wrapped_base64(raw)
+    if args.algorithm in ("auto", "tvbox-marked-cbc"):
+        marked_plain = decrypt_tvbox_marked_hex(raw)
+        if marked_plain is not None:
+            plain, detected = marked_plain, "TVBoxOS-marked-hex/AES-CBC"
+        elif args.algorithm == "tvbox-marked-cbc":
+            raise ValueError("输入内容不是 TVBoxOS 2423 HEX 标记格式")
+    wrapped = extract_wrapped_base64(raw) if detected == "raw" else None
     if wrapped is not None:
         plain, detected = wrapped, "image-wrapper(** + Base64)"
-    elif try_json(raw) is not None and args.algorithm in ("auto", "base64"):
+    elif detected == "raw" and try_json(raw) is not None and args.algorithm in ("auto", "base64"):
         detected = "plain-json"
 
-    if detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm == "base64":
+    if detected not in ("plain-json", "image-wrapper(** + Base64)", "TVBoxOS-marked-hex/AES-CBC") and args.algorithm == "base64":
         plain = b64decode_flexible(raw.decode("utf-8-sig"))
         detected = "Base64"
-    elif detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm.startswith("aes-"):
+    elif detected not in ("plain-json", "image-wrapper(** + Base64)", "TVBoxOS-marked-hex/AES-CBC") and args.algorithm.startswith("aes-"):
         mode = "ECB" if "ecb" in args.algorithm else "CBC"
         flavor = "tvbox" if args.algorithm.endswith("-tvbox") else "cryptox"
         fmt = "hex" if flavor == "tvbox" else args.input_format
         cipher_bytes = decode_cipher_input(raw.decode("utf-8-sig"), fmt)
         plain = aes_decrypt(cipher_bytes, args.aes_key, args.aes_iv, mode, flavor)
         detected = f"AES-{mode}-{flavor}"
-    elif detected not in ("plain-json", "image-wrapper(** + Base64)") and args.algorithm == "rsa":
+    elif detected not in ("plain-json", "image-wrapper(** + Base64)", "TVBoxOS-marked-hex/AES-CBC") and args.algorithm == "rsa":
         cipher_bytes = b64decode_flexible(raw.decode("utf-8-sig"))
         plain = rsa_decrypt(cipher_bytes, args.rsa_key, args.rsa_key_type, args.rsa_long)
         detected = f"RSA-PKCS1-{args.rsa_key_type}"
