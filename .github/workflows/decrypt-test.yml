@@ -99,7 +99,7 @@ jobs:
 
           message = b'{"sites":[{"key":"offline-test"}]}'
           # TVBox feeds may contain JSONC comments and trailing commas.
-          jsonc = b'{\\n  // comment\\n  "url":"https://example.com/a//b",\\n  "sites":[{"key":"offline-test",}],\\n}'
+          jsonc = b'{\n  // comment\n  "url":"https://example.com/a//b",\n  "sites":[{"key":"offline-test",}],\n}'
           parsed_jsonc = mod.try_json(jsonc)
           assert parsed_jsonc and parsed_jsonc["url"] == "https://example.com/a//b"
           assert mod.is_tvbox_json(parsed_jsonc)
