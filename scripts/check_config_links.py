@@ -178,6 +178,9 @@ def main():
     print("\n".join(lines))
     print(f"\nREPORT_JSON={OUT / 'config-link-report.json'}")
     print(f"REPORT_MD={OUT / 'config-link-report.md'}")
+    if failed:
+        print(f"\nLINK_CHECK_FAILED: {failed} link occurrence(s) returned an error.")
+        sys.exit(2)
 
 
 if __name__ == "__main__":
