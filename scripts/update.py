@@ -149,8 +149,8 @@ def _parse_image_wrapped_config(raw):
     raise ValueError("没有找到可解码的 '**' + Base64 JSON 载荷")
 
 
-FATCAT_API_URL = "https://xn--z7x900a.net/api/parse"
-FATCAT_TOOL_URL = "https://xn--z7x900a.net/tool"
+FATCAT_API_URL = "http://xn--z7x900a.net/api/parse"
+FATCAT_TOOL_URL = "http://xn--z7x900a.net/tool"
 
 
 def _parse_fatcat_result(result):
@@ -194,7 +194,7 @@ def fetch_via_fatcat(url):
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/json",
         "X-Requested-With": "fetch",
-        "Origin": "https://xn--z7x900a.net",
+        "Origin": "http://xn--z7x900a.net",
         "Referer": FATCAT_TOOL_URL,
     }
     resp = requests.post(
