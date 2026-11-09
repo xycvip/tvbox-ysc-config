@@ -131,7 +131,11 @@ def extract_wrapped_base64(raw):
 
 def decrypt_tvbox_marked_hex(raw):
     """Reproduce TVBoxOS ApiConfig.FindResult() for 2423... hex-wrapped configs."""
-    text = re.sub(r"\s+", "", raw.decode("utf-8-sig").strip())
+    try:
+        text = re.sub(r"\s+", "", raw.decode("utf-8-sig").strip())
+    except UnicodeDecodeError:
+        # Binary image wrappers (for example JPEG) are handled by the next detector.
+        return None
     if not text.startswith("2423"):
         return None
     if not re.fullmatch(r"[0-9a-fA-F]+", text) or len(text) % 2:
