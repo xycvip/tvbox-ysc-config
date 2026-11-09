@@ -15,7 +15,30 @@ ROOT = Path("config")
 OUT = Path("link-check-output")
 TIMEOUT = 15
 MAX_SAMPLE = 4096
-URL_RE = re.compile(r"https?://[^\s\"'<>]+", re.IGNORECASE)
+URL_RE = re.compile(r"https?://[^\\s\"'<>]+", re.IGNORECASE)
+
+# First attempt resembles the HTTP headers commonly sent by Android OkHttp.
+OKHTTP_HEADERS = {
+    "User-Agent": "okhttp/4.12.0",
+    "Accept": "*/*",
+    "Accept-Encoding": "identity",
+    "Connection": "Keep-Alive",
+    "Range": f"bytes=0-{MAX_SAMPLE - 1}",
+}
+
+# Some source hosts reject non-browser clients. Only use this fallback after 403.
+BROWSER_RETRY_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Linux; Android 13; Mobile) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Mobile Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Accept-Encoding": "identity",
+    "Connection": "Keep-Alive",
+    "Range": f"bytes=0-{MAX_SAMPLE - 1}",
+}
 
 
 def normalize_url(value):
@@ -80,14 +103,9 @@ def load_sources():
     return files, occurrences
 
 
-def check_url(url):
+def request_once(url, headers):
     started = time.monotonic()
-    req = urllib.request.Request(url, headers={
-        "User-Agent": "Mozilla/5.0 (compatible; TVBoxConfigLinkChecker/1.0)",
-        "Accept": "*/*",
-        "Accept-Encoding": "identity",
-        "Range": f"bytes=0-{MAX_SAMPLE - 1}",
-    })
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
             sample = response.read(MAX_SAMPLE)
@@ -102,10 +120,16 @@ def check_url(url):
                 "error": None,
             }
     except urllib.error.HTTPError as exc:
+        try:
+            exc.close()
+        except Exception:
+            pass
         return {
             "status": "HTTP_ERROR", "http_status": exc.code,
-            "final_url": exc.geturl(), "content_type": exc.headers.get("Content-Type", ""),
-            "sample_bytes": 0, "elapsed_ms": round((time.monotonic() - started) * 1000),
+            "final_url": exc.geturl(),
+            "content_type": exc.headers.get("Content-Type", "") if exc.headers else "",
+            "sample_bytes": 0,
+            "elapsed_ms": round((time.monotonic() - started) * 1000),
             "error": str(exc.reason),
         }
     except Exception as exc:
@@ -115,6 +139,30 @@ def check_url(url):
             "elapsed_ms": round((time.monotonic() - started) * 1000),
             "error": f"{type(exc).__name__}: {exc}",
         }
+
+
+def check_url(url):
+    first = request_once(url, OKHTTP_HEADERS)
+    first_status = first.get("http_status")
+    first["attempts"] = [{"client": "okhttp-style", **first.copy()}]
+    first["initial_http_status"] = first_status
+    first["retry_used"] = False
+
+    if first_status != 403:
+        return first
+
+    retry = request_once(url, BROWSER_RETRY_HEADERS)
+    first["attempts"].append({"client": "browser-fallback", **retry.copy()})
+    first["retry_used"] = True
+    # The fallback result determines final reachability, while preserving the
+    # original 403 in initial_http_status and attempts for diagnosis.
+    retry["attempts"] = first["attempts"]
+    retry["initial_http_status"] = 403
+    retry["retry_used"] = True
+    if retry.get("http_status") == 403:
+        retry["status"] = "HTTP_403_FORBIDDEN"
+        retry["error"] = "OkHttp 风格请求和浏览器请求头复测均返回 HTTP 403"
+    return retry
 
 
 def main():
@@ -161,25 +209,27 @@ def main():
         f"- 去重后实际检测：{len(unique_urls)}",
         f"- 可访问：{ok}",
         f"- 异常/不可访问：{failed}", "",
-        "| 状态 | HTTP | 文件 | JSON 路径 | URL | 耗时 | 结果/错误 |",
-        "|---|---:|---|---|---|---:|---|",
+        "| 状态 | HTTP | 文件 | JSON 路径 | URL | 耗时 | 复测 | 结果/错误 |",
+        "|---|---:|---|---|---|---:|---|---|",
     ]
     for row in rows:
         status = row.get("status", "UNKNOWN")
         http = row.get("http_status") or "-"
         elapsed = f'{row.get("elapsed_ms", "-")} ms' if "elapsed_ms" in row else "-"
+        retry = "浏览器请求头复测" if row.get("retry_used") else "-"
         detail = row.get("error") or row.get("content_type", "")
         url = row.get("normalized_url") or row["url"]
         lines.append(
             f"| {status} | {http} | {row['file']} | {row['json_path']} | "
-            f"{url.replace('|', '%7C')} | {elapsed} | {str(detail).replace('|', '/')} |"
+            f"{url.replace('|', '%7C')} | {elapsed} | {retry} | "
+            f"{str(detail).replace('|', '/')} |"
         )
-    (OUT / "config-link-report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print("\n".join(lines))
-    print(f"\nREPORT_JSON={OUT / 'config-link-report.json'}")
+    (OUT / "config-link-report.md").write_text("\\n".join(lines) + "\\n", encoding="utf-8")
+    print("\\n".join(lines))
+    print(f"\\nREPORT_JSON={OUT / 'config-link-report.json'}")
     print(f"REPORT_MD={OUT / 'config-link-report.md'}")
     if failed:
-        print(f"\nLINK_CHECK_FAILED: {failed} link occurrence(s) returned an error.")
+        print(f"\\nLINK_CHECK_FAILED: {failed} link occurrence(s) returned an error.")
         sys.exit(2)
 
 
