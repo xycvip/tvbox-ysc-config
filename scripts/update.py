@@ -552,10 +552,48 @@ def write_badge(ok_count, total):
         json.dump(badge, file, ensure_ascii=False, indent=2)
 
 
+def cleanup_orphan_source_outputs(cfg):
+    """
+    删除 output 中已不再配置的独立源 JSON。
+    仅清理普通 *.json 文件；保留多仓订阅、单仓聚合及运行状态文件。
+    """
+    configured_ids = {
+        str(source.get("id", source.get("name", "未知")))
+        for source in cfg.get("sources", [])
+    }
+    protected_names = {
+        "多仓订阅.json",
+        "单仓聚合.json",
+        "status.json",
+        "shield.json",
+    }
+    removed = []
+
+    for filename in os.listdir(OUTPUT_DIR):
+        if not filename.lower().endswith(".json"):
+            continue
+        if filename in protected_names:
+            continue
+        path = os.path.join(OUTPUT_DIR, filename)
+        if not os.path.isfile(path):
+            continue
+        source_id = filename[:-5]
+        if source_id not in configured_ids:
+            os.remove(path)
+            removed.append(filename)
+
+    if removed:
+        print("[清理] 删除 config/sources.json 中已不存在的源文件：" +
+              "、".join(sorted(removed)))
+    else:
+        print("[清理] output 中没有多余的源 JSON 文件")
+
+
 def main():
     with open(CONFIG_FILE, "r", encoding="utf-8") as file:
         cfg = json.load(file)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    cleanup_orphan_source_outputs(cfg)
 
     tz = datetime.timezone(datetime.timedelta(hours=8))
     now_str = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
