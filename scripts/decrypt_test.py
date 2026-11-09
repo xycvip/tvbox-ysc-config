@@ -102,14 +102,14 @@ def try_json(data):
 
 
 def b64decode_flexible(value):
-    value = re.sub(r"\\s+", "", value).replace("_", "/").replace("-", "+")
+    value = re.sub(r"\s+", "", value).replace("_", "/").replace("-", "+")
     value += "=" * ((4 - len(value) % 4) % 4)
     return base64.b64decode(value, validate=True)
 
 
 def extract_wrapped_base64(raw):
     candidates = []
-    eoi = raw.find(b"\\xff\\xd9")
+    eoi = raw.find(b"\xff\xd9")
     if eoi >= 0:
         candidates.append(raw[eoi + 2:])
     candidates.append(raw)
@@ -131,17 +131,17 @@ def extract_wrapped_base64(raw):
 
 def decrypt_tvbox_marked_hex(raw):
     """Reproduce TVBoxOS ApiConfig.FindResult() for 2423... hex-wrapped configs."""
-    text = re.sub(r"\\s+", "", raw.decode("utf-8-sig").strip())
+    text = re.sub(r"\s+", "", raw.decode("utf-8-sig").strip())
     if not text.startswith("2423"):
         return None
     if not re.fullmatch(r"[0-9a-fA-F]+", text) or len(text) % 2:
         raise ValueError("检测到 2423 标记，但外层内容不是完整 HEX")
     decoded = bytes.fromhex(text).decode("latin1")
-    marker = re.match(r"^\\$#(\\d{13})#\\$", decoded)
+    marker = re.match(r"^\$#(\d{13})#\$", decoded)
     if not marker:
         raise ValueError("检测到 2423 HEX 外壳，但缺少 TVBoxOS 的 $#{13位数字}#$ 标记")
     iv_text = decoded[-13:]
-    if not re.fullmatch(r"\\d{13}", iv_text):
+    if not re.fullmatch(r"\d{13}", iv_text):
         raise ValueError("TVBoxOS 标记数据末尾缺少 13 位数字 IV")
     marker_end = text.lower().find("2324")
     if marker_end < 0:
@@ -158,7 +158,7 @@ def decrypt_tvbox_marked_hex(raw):
 def decode_cipher_input(text, input_format):
     cleaned = text.strip()
     if input_format == "hex":
-        return bytes.fromhex(re.sub(r"\\s+", "", cleaned))
+        return bytes.fromhex(re.sub(r"\s+", "", cleaned))
     if input_format == "base64":
         return b64decode_flexible(cleaned)
     if input_format == "text":
@@ -167,7 +167,7 @@ def decode_cipher_input(text, input_format):
         return b64decode_flexible(cleaned)
     except Exception:
         pass
-    compact = re.sub(r"\\s+", "", cleaned)
+    compact = re.sub(r"\s+", "", cleaned)
     if re.fullmatch(r"(?:[0-9a-fA-F]{2})+", compact):
         return bytes.fromhex(compact)
     return cleaned.encode("utf-8")
@@ -188,10 +188,10 @@ def aes_decrypt(data, key, iv, mode, flavor):
         iv_bytes = iv.encode("utf-8")
     else:
         if len(key_bytes) < 16:
-            key_bytes = key_bytes.ljust(16, b"\\0")
+            key_bytes = key_bytes.ljust(16, b"\0")
         iv_bytes = iv.encode("utf-8") if iv else b""
         if iv and len(iv_bytes) < 16:
-            iv_bytes = iv_bytes.ljust(16, b"\\0")
+            iv_bytes = iv_bytes.ljust(16, b"\0")
 
     if len(key_bytes) not in (16, 24, 32):
         raise ValueError(f"AES key 长度无效：{len(key_bytes)} 字节")
@@ -228,10 +228,10 @@ def rsa_decrypt(data, key_text, key_type, long_mode):
         else:
             value = pow(int.from_bytes(block, "big"), key.e, key.n)
             encoded = value.to_bytes(block_size, "big")
-            if encoded[:2] not in (b"\\x00\\x01", b"\\x00\\x02"):
+            if encoded[:2] not in (b"\x00\x01", b"\x00\x02"):
                 chunk = None
             else:
-                sep = encoded.find(b"\\x00", 2)
+                sep = encoded.find(b"\x00", 2)
                 padding = encoded[2:sep] if sep >= 0 else b""
                 valid_padding = len(padding) >= 8 and (
                     (encoded[1] == 1 and all(byte == 0xff for byte in padding))
