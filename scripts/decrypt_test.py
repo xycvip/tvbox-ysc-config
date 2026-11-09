@@ -73,17 +73,17 @@ def extract_wrapped_base64(raw):
 
 def decrypt_tvbox_marked_hex(raw):
     """Reproduce TVBoxOS ApiConfig.FindResult() for 2423... hex-wrapped configs."""
-    text = re.sub(r"\\s+", "", raw.decode("utf-8-sig").strip())
+    text = re.sub(r"\s+", "", raw.decode("utf-8-sig").strip())
     if not text.startswith("2423"):
         return None
     if not re.fullmatch(r"[0-9a-fA-F]+", text) or len(text) % 2:
         raise ValueError("检测到 2423 标记，但外层内容不是完整 HEX")
     decoded = bytes.fromhex(text).decode("latin1")
-    marker = re.match(r"^\\$#(\\d{13})#\\$", decoded)
+    marker = re.match(r"^\$#(\d{13})#\$", decoded)
     if not marker:
         raise ValueError("检测到 2423 HEX 外壳，但缺少 TVBoxOS 的 $#{13位数字}#$ 标记")
     iv_text = decoded[-13:]
-    if not re.fullmatch(r"\\d{13}", iv_text):
+    if not re.fullmatch(r"\d{13}", iv_text):
         raise ValueError("TVBoxOS 标记数据末尾缺少 13 位数字 IV")
     marker_end = text.lower().find("2324")
     if marker_end < 0:
