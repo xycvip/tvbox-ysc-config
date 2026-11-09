@@ -133,6 +133,9 @@ jobs:
           marker_payload = (b"$#" + marker_digits.encode() + b"#$" + marker_cipher + marker_digits.encode()).hex().encode()
           assert mod.decrypt_tvbox_marked_hex(marker_payload) == message
 
+          # Binary image input must pass through to the image-wrapper detector.
+          assert mod.decrypt_tvbox_marked_hex(b"\\xff\\xd8\\xff\\xd9**") is None
+
           print("SELF_TEST_OK: AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt, TVBoxOS marked HEX/AES-CBC")
           PY
 
