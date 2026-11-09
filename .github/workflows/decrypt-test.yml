@@ -1,0 +1,116 @@
+name: Offline TVBox Decrypt Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: "可选：待测试接口/图片 URL（只下载原始数据，解密在 Actions 本地完成）"
+        required: false
+        type: string
+      payload:
+        description: "可选：直接粘贴待解密内容；与 source_url 二选一"
+        required: false
+        type: string
+      algorithm:
+        description: "解密方式；auto 不猜测密钥或 AES 参数"
+        required: true
+        type: choice
+        options:
+          - auto
+          - base64
+          - aes-ecb-tvbox
+          - aes-cbc-tvbox
+          - aes-ecb-cryptox
+          - aes-cbc-cryptox
+          - rsa
+        default: auto
+      input_format:
+        description: "Crypto.aes 输入格式"
+        required: true
+        type: choice
+        options:
+          - auto
+          - base64
+          - hex
+          - text
+        default: auto
+      aes_key:
+        description: "AES 测试密钥（仅测试用；不要粘贴生产密钥）"
+        required: false
+        type: string
+      aes_iv:
+        description: "AES-CBC IV"
+        required: false
+        type: string
+      rsa_key:
+        description: "RSA 测试密钥 PEM 或 Base64 DER（不要粘贴生产私钥）"
+        required: false
+        type: string
+      rsa_key_type:
+        description: "RSA 解密密钥类型"
+        required: true
+        type: choice
+        options:
+          - private
+          - public
+        default: private
+      rsa_long:
+        description: "是否按模数长度分块解密"
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  offline-decrypt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install local crypto implementation
+        run: python -m pip install --disable-pip-version-check pycryptodome==3.23.0
+
+      - name: Run offline decrypt test
+        env:
+          SOURCE_URL: \${{ inputs.source_url }}
+          PAYLOAD: \${{ inputs.payload }}
+          ALGORITHM: \${{ inputs.algorithm }}
+          INPUT_FORMAT: \${{ inputs.input_format }}
+          AES_KEY: \${{ inputs.aes_key }}
+          AES_IV: \${{ inputs.aes_iv }}
+          RSA_KEY: \${{ inputs.rsa_key }}
+          RSA_KEY_TYPE: \${{ inputs.rsa_key_type }}
+          RSA_LONG: \${{ inputs.rsa_long }}
+        shell: bash
+        run: |
+          args=(--algorithm "$ALGORITHM" --input-format "$INPUT_FORMAT" --output decrypt-output)
+          if [[ -n "$SOURCE_URL" ]]; then
+            args+=(--url "$SOURCE_URL")
+          elif [[ -n "$PAYLOAD" ]]; then
+            args+=(--payload "$PAYLOAD")
+          else
+            echo "::error::请填写 source_url 或 payload"
+            exit 1
+          fi
+          if [[ "$RSA_LONG" == "true" ]]; then
+            args+=(--rsa-long)
+          fi
+          python scripts/decrypt_test.py "\${args[@]}"
+
+      - name: Upload decrypt result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-decrypt-result
+          path: decrypt-output/
+          if-no-files-found: ignore
+          retention-days: 3
