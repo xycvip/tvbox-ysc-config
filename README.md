@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-10 00:52:02（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-10 01:14:12（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
