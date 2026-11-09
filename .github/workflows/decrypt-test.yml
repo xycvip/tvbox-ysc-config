@@ -18,6 +18,7 @@ on:
         options:
           - auto
           - base64
+          - tvbox-marked-cbc
           - aes-ecb-tvbox
           - aes-cbc-tvbox
           - aes-ecb-cryptox
@@ -120,7 +121,15 @@ jobs:
           signed_block = pow(int.from_bytes(em, "big"), rsa.d, rsa.n).to_bytes(size, "big")
           assert mod.rsa_decrypt(signed_block, rsa.publickey().export_key().decode(), "public", False) == message
 
-          print("SELF_TEST_OK: AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt")
+          # Reproduce ApiConfig.FindResult(): HEX("$#" + 13 digits + "#$" + AES-CBC + 13-digit IV)
+          marker_digits = "1234567890123"
+          marker_key = marker_digits.ljust(16, "0").encode()
+          marker_iv = marker_digits.ljust(16, "0").encode()
+          marker_cipher = AES.new(marker_key, AES.MODE_CBC, marker_iv).encrypt(pad(message, 16))
+          marker_payload = (b"$#" + marker_digits.encode() + b"#$" + marker_cipher + marker_digits.encode()).hex().encode()
+          assert mod.decrypt_tvbox_marked_hex(marker_payload) == message
+
+          print("SELF_TEST_OK: AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt, TVBoxOS marked HEX/AES-CBC")
           PY
 
       - name: Run offline decrypt test
