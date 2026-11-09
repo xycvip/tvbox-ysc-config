@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-09 02:39:38（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-09 17:08:07（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -84,7 +84,7 @@ https://d.kstore.dev/download/9280/wex.json
 https://9280.kstore.vip/newwex.json
 ```
 
-**地址 3：✅ 可用（HTTP 200）**
+**地址 3：❌ 不可用（请求超时）**
 
 ```text
 http://new.王二小放牛娃.top
