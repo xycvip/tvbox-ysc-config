@@ -79,6 +79,50 @@ jobs:
       - name: Install local crypto implementation
         run: python -m pip install --disable-pip-version-check pycryptodome==3.23.0
 
+      - name: Validate TVBoxOS-compatible crypto routines
+        run: |
+          python -m py_compile scripts/decrypt_test.py
+          python - <<'PY'
+          import importlib.util
+          from Crypto.Cipher import AES, PKCS1_v1_5
+          from Crypto.PublicKey import RSA
+          from Crypto.Util.Padding import pad
+
+          spec = importlib.util.spec_from_file_location("decrypt_test", "scripts/decrypt_test.py")
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+
+          message = b'{"sites":[{"key":"offline-test"}]}'
+          key = "0123456789abcdef"
+          iv = "abcdef0123456789"
+
+          ecb = AES.new(key.encode(), AES.MODE_ECB).encrypt(pad(message, 16))
+          assert mod.aes_decrypt(ecb, key, "", "ECB", "tvbox") == message
+
+          cbc = AES.new(key.encode(), AES.MODE_CBC, iv.encode()).encrypt(pad(message, 16))
+          assert mod.aes_decrypt(cbc, key, iv, "CBC", "tvbox") == message
+
+          short_key, short_iv = "short-key", "short-iv"
+          padded_key = short_key.encode().ljust(16, b"\\0")
+          padded_iv = short_iv.encode().ljust(16, b"\\0")
+          cbc_x = AES.new(padded_key, AES.MODE_CBC, padded_iv).encrypt(pad(message, 16))
+          assert mod.aes_decrypt(cbc_x, short_key, short_iv, "CBC", "cryptox") == message
+
+          rsa = RSA.generate(1024)
+          long_message = b"TVBoxOS RSA segmented decrypt self-test " * 8
+          enc = PKCS1_v1_5.new(rsa.publickey())
+          rsa_cipher = b"".join(enc.encrypt(long_message[i:i+117]) for i in range(0, len(long_message), 117))
+          assert mod.rsa_decrypt(rsa_cipher, rsa.export_key().decode(), "private", True) == long_message
+
+          # TVBoxOS also permits public-key decrypt of a PKCS#1 v1.5 type-1 block.
+          size = rsa.size_in_bytes()
+          em = b"\\x00\\x01" + b"\\xff" * (size - len(message) - 3) + b"\\x00" + message
+          signed_block = pow(int.from_bytes(em, "big"), rsa.d, rsa.n).to_bytes(size, "big")
+          assert mod.rsa_decrypt(signed_block, rsa.publickey().export_key().decode(), "public", False) == message
+
+          print("SELF_TEST_OK: AES ECB/CBC, Crypto.aes padding, RSA private segmented + public decrypt")
+          PY
+
       - name: Run offline decrypt test
         env:
           SOURCE_URL: ${{ inputs.source_url }}
