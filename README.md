@@ -18,11 +18,11 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-09 17:08:07（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-09 23:45:51（北京时间） · 成功 **8/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
-| 肥猫 | 📦 缓存沿用（本次未抓取成功） |
+| 肥猫 | ✅ 更新成功 |
 | 饭太硬 | ✅ 更新成功 |
 | 王二小 | ✅ 更新成功 |
 | 摸鱼儿 | ✅ 更新成功 |
@@ -30,7 +30,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 | 老刘备 | ✅ 更新成功 |
 | 小马 | ✅ 更新成功 |
 | 4K小盒子 | ✅ 更新成功 |
-| 小盒子单仓 | ✅ 更新成功 |
+| 潇洒 | ❌ 更新失败：响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=... |
 
 ### 源配置链接（每条地址单独检测，点击代码框右上角复制）
 
@@ -38,16 +38,22 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 **肥猫**
 
-**地址 1：❌ 不可用（HTTP 404）**
+**地址 1：✅ 可用（HTTP 200）**
 
 ```text
-http://肥猫.net/tv
+http://hello.肥猫.net/
 ```
 
 **地址 2：✅ 可用（HTTP 200）**
 
 ```text
 http://肥猫.net/
+```
+
+**地址 3：✅ 可用（HTTP 200）**
+
+```text
+http://w.junce.dpdns.org/fm.gif
 ```
 
 **饭太硬**
@@ -99,6 +105,12 @@ http://我不是.摸鱼儿.top
 ```
 
 **地址 2：✅ 可用（HTTP 200）**
+
+```text
+http://我不是.摸鱼儿.cc/
+```
+
+**地址 3：✅ 可用（HTTP 200）**
 
 ```text
 https://6800.kstore.vip/fish.json
@@ -154,12 +166,12 @@ http://xhztv.top/4k.json
 http://xhztv.top/xhz
 ```
 
-**小盒子单仓**
+**潇洒**
 
 **配置地址：✅ 可用（HTTP 200）**
 
 ```text
-http://xhztv.top/xhz
+https://9877.kstore.space/sun.json
 ```
 
 <!-- STATUS_END -->
@@ -371,22 +383,22 @@ https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 ```
 
-### 线路 · 小盒子单仓
+### 线路 · 潇洒
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
 ```text
-https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
 ```text
-https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 <!-- ARTIFACT_LINKS_END -->
 

@@ -31,10 +31,6 @@
     {
       "name": "4K小盒子",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json"
-    },
-    {
-      "name": "小盒子单仓",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaohezi.json"
     }
   ]
 }

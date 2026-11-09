@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-11-09 17:08:07",
+  "updated_at": "2026-11-09 23:45:51",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=http://xn--z7x900a.net/; Content-Type='application/json; charset=utf-8'; Content-Disposition=''; bytes=25244; preview='2423376430777775336772626a363823241af48d81469970e1c9451a7877c9105f26391acb5305eb2a222d2e31442f8e'",
+      "used_url": "http://w.junce.dpdns.org/fm.gif",
+      "error": null,
       "source_urls": [
-        "http://肥猫.net/tv",
-        "http://肥猫.net/"
-      ],
-      "cached": true
+        "http://hello.肥猫.net/",
+        "http://肥猫.net/",
+        "http://w.junce.dpdns.org/fm.gif"
+      ]
     },
     {
       "id": "fantaiying",
@@ -46,6 +46,7 @@
       "error": null,
       "source_urls": [
         "http://我不是.摸鱼儿.top",
+        "http://我不是.摸鱼儿.cc/",
         "https://6800.kstore.vip/fish.json"
       ]
     },
@@ -93,13 +94,13 @@
       ]
     },
     {
-      "id": "xiaohezi",
-      "name": "小盒子单仓",
-      "ok": true,
-      "used_url": "http://xhztv.top/xhz",
-      "error": null,
+      "id": "xiaosa",
+      "name": "潇洒",
+      "ok": false,
+      "used_url": null,
+      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；响应诊断：HTTP=200; final_url=https://9877.kstore.space/sun.json; Content-Type='text/plain'; Content-Disposition=''; bytes=56380; preview='2423313233343536373839303132332324af8a71deeab615a1157e323453cf5e61902629c1c791b822ba8fc559da30d5'",
       "source_urls": [
-        "http://xhztv.top/xhz"
+        "https://9877.kstore.space/sun.json"
       ]
     }
   ]
