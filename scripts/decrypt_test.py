@@ -147,10 +147,10 @@ def rsa_decrypt(data, key_text, key_type, long_mode):
             # type-1/type-2 block padding locally.
             value = pow(int.from_bytes(block, "big"), key.e, key.n)
             encoded = value.to_bytes(block_size, "big")
-            if encoded[:2] not in (b"\\x00\\x01", b"\\x00\\x02"):
+            if encoded[:2] not in (b"\x00\x01", b"\x00\x02"):
                 chunk = None
             else:
-                sep = encoded.find(b"\\x00", 2)
+                sep = encoded.find(b"\x00", 2)
                 padding = encoded[2:sep] if sep >= 0 else b""
                 valid_padding = len(padding) >= 8 and (
                     (encoded[1] == 1 and all(byte == 0xff for byte in padding))
