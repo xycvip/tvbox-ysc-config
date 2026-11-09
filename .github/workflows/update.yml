@@ -47,6 +47,9 @@ jobs:
       - name: Apply source-specific JARs
         run: python scripts/jar_patch.py
 
+      - name: Check link validity and update README
+        run: python scripts/update.py --finalize
+
       - name: Commit and push changes
         run: |
           git config --local user.name "github-actions[bot]"
