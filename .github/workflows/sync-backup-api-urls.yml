@@ -25,12 +25,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: 测试并同步可访问的备用网址
+      - name: 检查脚本语法并同步备用网址
         run: |
-          if python .github/scripts/sync_backup_list.py; then
-            echo "::notice::备用网址同步脚本执行完成"
+          if python -m py_compile .github/scripts/sync_backup_list.py; then
+            echo "::notice::脚本语法检查通过"
+            if python .github/scripts/sync_backup_list.py; then
+              echo "::notice::备用网址同步脚本执行完成"
+            else
+              echo "::warning::备用网址同步执行异常，已跳过本次更新；工作流继续"
+            fi
           else
-            echo "::warning::本次同步遇到异常，已跳过更新；按照要求，工作流仍继续并标记成功"
+            echo "::warning::脚本语法检查未通过，已跳过本次更新；工作流继续"
           fi
 
       - name: 提交配置变更
