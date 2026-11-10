@@ -1,29 +1,71 @@
 {
-  "updated_at": "2026-11-10 14:59:38",
+  "updated_at": "2026-11-10 15:06:55",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "http://hello.肥猫.net/",
+      "used_url": "http://w.junce.dpdns.org/fm.gif",
       "error": null,
       "source_urls": [
         "http://hello.肥猫.net/",
         "http://肥猫.net/",
         "http://w.junce.dpdns.org/fm.gif"
+      ],
+      "selected_url": "http://w.junce.dpdns.org/fm.gif",
+      "speed_checks": [
+        {
+          "url": "http://hello.肥猫.net/",
+          "ok": true,
+          "elapsed_ms": 16648,
+          "error": null
+        },
+        {
+          "url": "http://肥猫.net/",
+          "ok": true,
+          "elapsed_ms": 4625,
+          "error": null
+        },
+        {
+          "url": "http://w.junce.dpdns.org/fm.gif",
+          "ok": true,
+          "elapsed_ms": 423,
+          "error": null
+        }
       ]
     },
     {
       "id": "fantaiying",
       "name": "饭太硬",
       "ok": true,
-      "used_url": "http://www.饭太硬.net/tv",
+      "used_url": "http://www.饭太硬.cc/tv",
       "error": null,
       "source_urls": [
         "http://www.饭太硬.net/tv",
         "http://www.饭太硬.cc/tv",
         "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
+      ],
+      "selected_url": "http://www.饭太硬.cc/tv",
+      "speed_checks": [
+        {
+          "url": "http://www.饭太硬.net/tv",
+          "ok": true,
+          "elapsed_ms": 622,
+          "error": null
+        },
+        {
+          "url": "http://www.饭太硬.cc/tv",
+          "ok": true,
+          "elapsed_ms": 444,
+          "error": null
+        },
+        {
+          "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
+          "ok": true,
+          "elapsed_ms": 1470,
+          "error": null
+        }
       ]
     },
     {
@@ -36,30 +78,93 @@
         "https://d.kstore.dev/download/9280/wex.json",
         "https://9280.kstore.vip/newwex.json",
         "http://new.王二小放牛娃.top"
+      ],
+      "selected_url": "https://d.kstore.dev/download/9280/wex.json",
+      "speed_checks": [
+        {
+          "url": "https://d.kstore.dev/download/9280/wex.json",
+          "ok": true,
+          "elapsed_ms": 338,
+          "error": null
+        },
+        {
+          "url": "https://9280.kstore.vip/newwex.json",
+          "ok": true,
+          "elapsed_ms": 444,
+          "error": null
+        },
+        {
+          "url": "http://new.王二小放牛娃.top",
+          "ok": true,
+          "elapsed_ms": 1122,
+          "error": null
+        }
       ]
     },
     {
       "id": "moyuer",
       "name": "摸鱼儿",
       "ok": true,
-      "used_url": "http://我不是.摸鱼儿.top",
+      "used_url": "https://6800.kstore.vip/fish.json",
       "error": null,
       "source_urls": [
         "http://我不是.摸鱼儿.top",
         "http://我不是.摸鱼儿.cc/",
         "https://6800.kstore.vip/fish.json"
+      ],
+      "selected_url": "https://6800.kstore.vip/fish.json",
+      "speed_checks": [
+        {
+          "url": "http://我不是.摸鱼儿.top",
+          "ok": true,
+          "elapsed_ms": 1068,
+          "error": null
+        },
+        {
+          "url": "http://我不是.摸鱼儿.cc/",
+          "ok": true,
+          "elapsed_ms": 1257,
+          "error": null
+        },
+        {
+          "url": "https://6800.kstore.vip/fish.json",
+          "ok": true,
+          "elapsed_ms": 652,
+          "error": null
+        }
       ]
     },
     {
       "id": "aowu",
       "name": "嗷呜",
       "ok": true,
-      "used_url": "http://www.英格里希嗷呜.top/tv",
+      "used_url": "https://9763.kstore.vip/aowu.json",
       "error": null,
       "source_urls": [
         "http://www.英格里希嗷呜.top/tv",
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
+      ],
+      "selected_url": "https://9763.kstore.vip/aowu.json",
+      "speed_checks": [
+        {
+          "url": "http://www.英格里希嗷呜.top/tv",
+          "ok": true,
+          "elapsed_ms": 3622,
+          "error": null
+        },
+        {
+          "url": "https://9763.kstore.vip/aowu.json",
+          "ok": true,
+          "elapsed_ms": 591,
+          "error": null
+        },
+        {
+          "url": "http://itv666.cc/aowu/config.webp",
+          "ok": true,
+          "elapsed_ms": 3027,
+          "error": null
+        }
       ]
     },
     {
@@ -70,7 +175,9 @@
       "error": null,
       "source_urls": [
         "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json"
-      ]
+      ],
+      "selected_url": "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json",
+      "speed_checks": []
     },
     {
       "id": "xiaoma",
@@ -80,7 +187,9 @@
       "error": null,
       "source_urls": [
         "https://szyyds.cn/tv/x.json"
-      ]
+      ],
+      "selected_url": "https://szyyds.cn/tv/x.json",
+      "speed_checks": []
     },
     {
       "id": "4k",
@@ -91,6 +200,21 @@
       "source_urls": [
         "http://xhztv.top/4k.json",
         "http://xhztv.top/xhz"
+      ],
+      "selected_url": "http://xhztv.top/4k.json",
+      "speed_checks": [
+        {
+          "url": "http://xhztv.top/4k.json",
+          "ok": true,
+          "elapsed_ms": 230,
+          "error": null
+        },
+        {
+          "url": "http://xhztv.top/xhz",
+          "ok": true,
+          "elapsed_ms": 414,
+          "error": null
+        }
       ]
     },
     {
@@ -101,7 +225,9 @@
       "error": null,
       "source_urls": [
         "https://9877.kstore.space/sun.json"
-      ]
+      ],
+      "selected_url": "https://9877.kstore.space/sun.json",
+      "speed_checks": []
     }
   ]
 }
