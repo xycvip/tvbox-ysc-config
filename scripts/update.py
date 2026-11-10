@@ -332,13 +332,13 @@ def check_http_url(url, timeout=10):
     return result
 
 
-def build_subscription_entries(name, sid, raw_base):
-    """为每个配置生成直连、gh-proxy.com、gh-proxy.org 三条独立入口。"""
-    raw_url = f"{raw_base}/{sid}.json"
+def build_subscription_entries(name, original_url):
+    """基于 config/sources.json 中实际使用的上游地址生成三条独立入口。"""
+    original_url = str(original_url).strip()
     return [
-        {"name": name, "url": raw_url},
-        {"name": f"{name}1", "url": f"https://gh-proxy.com/{raw_url}"},
-        {"name": f"{name}2", "url": f"https://gh-proxy.org/{raw_url}"},
+        {"name": name, "url": original_url},
+        {"name": f"{name}1", "url": f"https://gh-proxy.com/{original_url}"},
+        {"name": f"{name}2", "url": f"https://gh-proxy.org/{original_url}"},
     ]
 
 
@@ -647,8 +647,6 @@ def main():
     now_str = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
     repo = (os.environ.get("GITHUB_REPOSITORY")
             or os.environ.get("REPO") or DEFAULT_REPO)
-    # 多仓订阅同时发布 GitHub 原始直链和两个独立代理入口，避免单代理故障导致全线失联。
-    raw_base = f"https://raw.githubusercontent.com/{repo}/main/output"
 
     status = {"updated_at": now_str, "repo": repo, "sources": []}
     subscriptions, fetched = [], []
@@ -673,7 +671,7 @@ def main():
                 with open(out_path, "w", encoding="utf-8") as file:
                     json.dump(data, file, ensure_ascii=False, indent=2)
                 entry.update({"ok": True, "used_url": url, "error": None})
-                subscriptions.extend(build_subscription_entries(name, sid, raw_base))
+                subscriptions.extend(build_subscription_entries(name, url))
                 fetched.append((sid, name, data))
                 ok_count += 1
                 saved = True
@@ -692,7 +690,9 @@ def main():
                     with open(cache_path, "r", encoding="utf-8") as file:
                         cached = json.load(file)
                     if is_valid_tvbox_config(cached):
-                        subscriptions.extend(build_subscription_entries(name, sid, raw_base))
+                        # 本次上游全部失败但沿用缓存时，仍以配置中首个原始地址生成三条入口。
+                        if urls:
+                            subscriptions.extend(build_subscription_entries(name, urls[0]))
                         fetched.append((sid, name, cached))
                         entry.update({
                             "ok": True, "cached": True,
