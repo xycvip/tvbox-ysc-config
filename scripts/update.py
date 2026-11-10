@@ -579,11 +579,11 @@ def update_artifact_links(cfg, repo):
                 "",
             ])
 
-    block = "\\n".join(lines).rstrip()
+    block = "\n".join(lines).rstrip()
     prefix = readme.split(ARTIFACTS_START, 1)[0]
     suffix = readme.split(ARTIFACTS_END, 1)[1]
     with open(README_PATH, "w", encoding="utf-8") as file:
-        file.write(f"{prefix}{ARTIFACTS_START}\\n{block}\\n{ARTIFACTS_END}{suffix}")
+        file.write(f"{prefix}{ARTIFACTS_START}\n{block}\n{ARTIFACTS_END}{suffix}")
 
 
 def write_badge(ok_count, total):
