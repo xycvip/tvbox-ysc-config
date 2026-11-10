@@ -235,15 +235,16 @@ def main():
         while prior > item["open_line"] and not lines[prior].strip():
             prior -= 1
         if prior > item["open_line"]:
-            lines[prior] = lines[prior].rstrip("\r\n").rstrip() + ",\n"
+            previous_text = lines[prior].rstrip("\r\n").rstrip()
+            if not previous_text.endswith(","):
+                lines[prior] = previous_text + ",\n"
 
-        new_lines = [
-            element_indent + json.dumps(url, ensure_ascii=False) + ",\n"
-            for url in additions[name]
-        ]
-        # 最后一个元素不保留逗号，遵循原数组的常见格式。
-        if new_lines:
-            new_lines[-1] = new_lines[-1].rstrip("\n") + "\n"
+        new_lines = []
+        for index, url in enumerate(additions[name]):
+            comma = "," if index < len(additions[name]) - 1 else ""
+            new_lines.append(
+                element_indent + json.dumps(url, ensure_ascii=False) + comma + "\n"
+            )
         insertions.setdefault(close_line, []).extend(new_lines)
 
     for index in sorted(insertions.keys(), reverse=True):
