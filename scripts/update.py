@@ -692,7 +692,7 @@ def main():
                     with open(cache_path, "r", encoding="utf-8") as file:
                         cached = json.load(file)
                     if is_valid_tvbox_config(cached):
-                subscriptions.extend(build_subscription_entries(name, sid, raw_base))
+                        subscriptions.extend(build_subscription_entries(name, sid, raw_base))
                         fetched.append((sid, name, cached))
                         entry.update({
                             "ok": True, "cached": True,
