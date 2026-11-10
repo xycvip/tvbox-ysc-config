@@ -663,57 +663,110 @@ def main():
             "source_urls": urls,
         }
         saved = False
-        candidates = []
-        speed_checks = []
+        first_success = None
+        phase1_results = []
 
-        # 只有一个原始地址时直接获取，不做测速比较；多个地址时全部实测，
-        # 仅将能成功解析为 TVBox 配置的地址纳入排名。
+        # 第一阶段：生成 output/<id>.json。
+        # 严格按 config 中的顺序尝试，遇到第一个可解析的 TVBox JSON 就停止；
+        # 这一阶段不做速度比较，确保 output 文件采用顺序上第一个可用源。
         for index, url in enumerate(urls):
             started = time.monotonic()
             try:
                 data = fetch_config(url)
                 elapsed_ms = round((time.monotonic() - started) * 1000)
-                candidates.append((elapsed_ms, url, data))
-                if len(urls) > 1:
-                    speed_checks.append({
-                        "url": url, "ok": True, "elapsed_ms": elapsed_ms,
-                        "error": None,
-                    })
-                    print(f"[测速] {name} / 原始地址 {index + 1}: 可用，{elapsed_ms} ms")
-                else:
-                    print(f"[OK]   {name} <- {url}")
+                phase1_results.append({
+                    "url": url, "ok": True, "elapsed_ms": elapsed_ms,
+                    "data": data, "error": None,
+                })
+                first_success = (index, url, data, elapsed_ms)
+                print(f"[OK]   {name} <- {url}（按配置顺序首次获取成功）")
+                break
             except Exception as exc:
                 error = str(exc)
+                elapsed_ms = round((time.monotonic() - started) * 1000)
+                phase1_results.append({
+                    "url": url, "ok": False, "elapsed_ms": elapsed_ms,
+                    "data": None, "error": error,
+                })
                 entry["error"] = error
-                if len(urls) > 1:
-                    elapsed_ms = round((time.monotonic() - started) * 1000)
-                    speed_checks.append({
-                        "url": url, "ok": False, "elapsed_ms": elapsed_ms,
-                        "error": error,
-                    })
-                    print(f"[测速] {name} / 原始地址 {index + 1}: 失败，{elapsed_ms} ms -> {error}")
-                else:
-                    print(f"[FAIL] {name}  {url}  ->  {error}")
-            if len(urls) > 1 and index < len(urls) - 1:
-                time.sleep(URL_INTERVAL)
+                print(f"[FAIL] {name} / 原始地址 {index + 1}: {url} -> {error}")
+                if index < len(urls) - 1:
+                    time.sleep(URL_INTERVAL)
 
-        if candidates:
-            best_elapsed, best_url, best_data = min(candidates, key=lambda item: item[0])
+        if first_success:
+            _first_index, first_url, first_data, _first_elapsed = first_success
             out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
             with open(out_path, "w", encoding="utf-8") as file:
-                json.dump(best_data, file, ensure_ascii=False, indent=2)
+                json.dump(first_data, file, ensure_ascii=False, indent=2)
             entry.update({
-                "ok": True, "used_url": best_url, "selected_url": best_url,
-                "error": None, "speed_checks": speed_checks,
+                "ok": True, "used_url": first_url,
+                "output_url": first_url, "error": None,
             })
-            subscriptions.extend(build_subscription_entries(name, best_url))
-            fetched.append((sid, name, best_data))
+            fetched.append((sid, name, first_data))
             ok_count += 1
             saved = True
+
+            # 第二阶段：仅在生成单仓/多仓订阅入口时测速择优。
+            # 第一阶段已经测过的地址复用其完整获取耗时；继续测试尚未尝试的地址。
             if len(urls) > 1:
-                print(f"[优选] {name} 选择最快原始地址：{best_url}（{best_elapsed} ms）")
-        elif speed_checks:
-            entry["speed_checks"] = speed_checks
+                subscription_candidates = []
+                speed_checks = []
+                for result in phase1_results:
+                    speed_checks.append({
+                        "url": result["url"], "ok": result["ok"],
+                        "elapsed_ms": result["elapsed_ms"],
+                        "error": result["error"],
+                    })
+                    if result["ok"]:
+                        subscription_candidates.append(
+                            (result["elapsed_ms"], result["url"])
+                        )
+
+                for index in range(_first_index + 1, len(urls)):
+                    url = urls[index]
+                    started = time.monotonic()
+                    try:
+                        fetch_config(url)
+                        elapsed_ms = round((time.monotonic() - started) * 1000)
+                        subscription_candidates.append((elapsed_ms, url))
+                        speed_checks.append({
+                            "url": url, "ok": True, "elapsed_ms": elapsed_ms,
+                            "error": None,
+                        })
+                        print(f"[订阅测速] {name} / 原始地址 {index + 1}: 可用，{elapsed_ms} ms")
+                    except Exception as exc:
+                        error = str(exc)
+                        elapsed_ms = round((time.monotonic() - started) * 1000)
+                        speed_checks.append({
+                            "url": url, "ok": False, "elapsed_ms": elapsed_ms,
+                            "error": error,
+                        })
+                        print(f"[订阅测速] {name} / 原始地址 {index + 1}: 失败，{elapsed_ms} ms -> {error}")
+                    if index < len(urls) - 1:
+                        time.sleep(URL_INTERVAL)
+
+                if subscription_candidates:
+                    best_elapsed, best_url = min(
+                        subscription_candidates, key=lambda item: item[0]
+                    )
+                    subscriptions.extend(build_subscription_entries(name, best_url))
+                    entry["selected_url"] = best_url
+                    entry["speed_checks"] = speed_checks
+                    print(f"[订阅优选] {name} 选择最快可用上游地址：{best_url}（{best_elapsed} ms）")
+            else:
+                # 单个地址无需测速比较，直接用于订阅中的原始线路。
+                subscriptions.extend(build_subscription_entries(name, first_url))
+                entry["selected_url"] = first_url
+        elif len(urls) > 1:
+            # output 更新阶段全部失败时，记录失败地址的请求耗时；缓存回退逻辑保持不变。
+            entry["speed_checks"] = [
+                {
+                    "url": result["url"], "ok": result["ok"],
+                    "elapsed_ms": result["elapsed_ms"],
+                    "error": result["error"],
+                }
+                for result in phase1_results
+            ]
 
         if not saved:
             cache_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
@@ -722,7 +775,8 @@ def main():
                     with open(cache_path, "r", encoding="utf-8") as file:
                         cached = json.load(file)
                     if is_valid_tvbox_config(cached):
-                        # 本次上游全部失败但沿用缓存时，仍以配置中首个原始地址生成三条入口。
+                        # 本次上游全部失败但沿用缓存时，没有可参与择优的有效地址；
+                        # 保留原有首地址作为订阅原始线路的兜底入口。
                         if urls:
                             subscriptions.extend(build_subscription_entries(name, urls[0]))
                         fetched.append((sid, name, cached))
