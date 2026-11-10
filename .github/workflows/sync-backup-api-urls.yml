@@ -1,4 +1,4 @@
-name: Sync backup API URLs
+name: 备用网址同步
 
 "on":
   workflow_dispatch:
@@ -14,20 +14,26 @@ concurrency:
 
 jobs:
   sync:
+    name: 同步备用网址
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: 检出仓库
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 设置 Python 环境
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Sync accessible backup URLs
-        run: python .github/scripts/sync_backup_list.py
+      - name: 测试并同步可访问的备用网址
+        run: |
+          if python .github/scripts/sync_backup_list.py; then
+            echo "::notice::备用网址同步脚本执行完成"
+          else
+            echo "::warning::本次同步遇到异常，已跳过更新；按照要求，工作流仍继续并标记成功"
+          fi
 
-      - name: Commit changes
+      - name: 提交配置变更
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -35,6 +41,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "::notice::没有新增可用备用网址，跳过提交"
           else
-            git commit -m "chore: sync accessible backup API URLs"
+            git commit -m "chore: 同步备用网址"
             git push origin main
           fi
