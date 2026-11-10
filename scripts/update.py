@@ -332,13 +332,21 @@ def check_http_url(url, timeout=10):
     return result
 
 
-def build_subscription_entries(name, original_url):
-    """基于 config/sources.json 中实际使用的上游地址生成三条独立入口。"""
+def build_subscription_entries(name, original_url, source_id, repo):
+    """
+    生成三条不同来源的订阅入口：
+    - 原名称：config/sources.json 中测速择优后的上游原始地址
+    - 名称1/名称2：通过 gh-proxy.com / gh-proxy.org 访问本仓库已生成的 output JSON
+    """
     original_url = str(original_url).strip()
+    filename = urllib.parse.quote(f"{source_id}.json", safe="")
+    output_url = (
+        f"https://raw.githubusercontent.com/{repo}/main/output/{filename}"
+    )
     return [
         {"name": name, "url": original_url},
-        {"name": f"{name}1", "url": f"https://gh-proxy.com/{original_url}"},
-        {"name": f"{name}2", "url": f"https://gh-proxy.org/{original_url}"},
+        {"name": f"{name}1", "url": f"https://gh-proxy.com/{output_url}"},
+        {"name": f"{name}2", "url": f"https://gh-proxy.org/{output_url}"},
     ]
 
 
@@ -749,13 +757,13 @@ def main():
                     best_elapsed, best_url = min(
                         subscription_candidates, key=lambda item: item[0]
                     )
-                    subscriptions.extend(build_subscription_entries(name, best_url))
+                    subscriptions.extend(build_subscription_entries(name, best_url, sid, repo))
                     entry["selected_url"] = best_url
                     entry["speed_checks"] = speed_checks
                     print(f"[订阅优选] {name} 选择最快可用上游地址：{best_url}（{best_elapsed} ms）")
             else:
                 # 单个地址无需测速比较，直接用于订阅中的原始线路。
-                subscriptions.extend(build_subscription_entries(name, first_url))
+                subscriptions.extend(build_subscription_entries(name, first_url, sid, repo))
                 entry["selected_url"] = first_url
         elif len(urls) > 1:
             # output 更新阶段全部失败时，记录失败地址的请求耗时；缓存回退逻辑保持不变。
@@ -778,7 +786,7 @@ def main():
                         # 本次上游全部失败但沿用缓存时，没有可参与择优的有效地址；
                         # 保留原有首地址作为订阅原始线路的兜底入口。
                         if urls:
-                            subscriptions.extend(build_subscription_entries(name, urls[0]))
+                            subscriptions.extend(build_subscription_entries(name, urls[0], sid, repo))
                         fetched.append((sid, name, cached))
                         entry.update({
                             "ok": True, "cached": True,
