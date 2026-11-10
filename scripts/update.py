@@ -663,25 +663,57 @@ def main():
             "source_urls": urls,
         }
         saved = False
+        candidates = []
+        speed_checks = []
 
-        for url in urls:
+        # 只有一个原始地址时直接获取，不做测速比较；多个地址时全部实测，
+        # 仅将能成功解析为 TVBox 配置的地址纳入排名。
+        for index, url in enumerate(urls):
+            started = time.monotonic()
             try:
                 data = fetch_config(url)
-                out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
-                with open(out_path, "w", encoding="utf-8") as file:
-                    json.dump(data, file, ensure_ascii=False, indent=2)
-                entry.update({"ok": True, "used_url": url, "error": None})
-                subscriptions.extend(build_subscription_entries(name, url))
-                fetched.append((sid, name, data))
-                ok_count += 1
-                saved = True
-                print(f"[OK]   {name} <- {url}")
-                break
+                elapsed_ms = round((time.monotonic() - started) * 1000)
+                candidates.append((elapsed_ms, url, data))
+                if len(urls) > 1:
+                    speed_checks.append({
+                        "url": url, "ok": True, "elapsed_ms": elapsed_ms,
+                        "error": None,
+                    })
+                    print(f"[测速] {name} / 原始地址 {index + 1}: 可用，{elapsed_ms} ms")
+                else:
+                    print(f"[OK]   {name} <- {url}")
             except Exception as exc:
                 error = str(exc)
                 entry["error"] = error
-                print(f"[FAIL] {name}  {url}  ->  {error}")
-            time.sleep(URL_INTERVAL)
+                if len(urls) > 1:
+                    elapsed_ms = round((time.monotonic() - started) * 1000)
+                    speed_checks.append({
+                        "url": url, "ok": False, "elapsed_ms": elapsed_ms,
+                        "error": error,
+                    })
+                    print(f"[测速] {name} / 原始地址 {index + 1}: 失败，{elapsed_ms} ms -> {error}")
+                else:
+                    print(f"[FAIL] {name}  {url}  ->  {error}")
+            if len(urls) > 1 and index < len(urls) - 1:
+                time.sleep(URL_INTERVAL)
+
+        if candidates:
+            best_elapsed, best_url, best_data = min(candidates, key=lambda item: item[0])
+            out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
+            with open(out_path, "w", encoding="utf-8") as file:
+                json.dump(best_data, file, ensure_ascii=False, indent=2)
+            entry.update({
+                "ok": True, "used_url": best_url, "selected_url": best_url,
+                "error": None, "speed_checks": speed_checks,
+            })
+            subscriptions.extend(build_subscription_entries(name, best_url))
+            fetched.append((sid, name, best_data))
+            ok_count += 1
+            saved = True
+            if len(urls) > 1:
+                print(f"[优选] {name} 选择最快原始地址：{best_url}（{best_elapsed} ms）")
+        elif speed_checks:
+            entry["speed_checks"] = speed_checks
 
         if not saved:
             cache_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
