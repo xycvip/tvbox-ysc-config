@@ -113,7 +113,154 @@ def locate_url_arrays(text):
     """按 sources 对象的 name 行定位 urls 数组，避免重新序列化整个 JSON。"""
     lines = text.splitlines(keepends=True)
     found = []
-    name_re = re.compile(r'^(\s*)"name"\s*:\s*("(?:\\\\.|[^"\\\\])*")\s*,?\s*$')
+    name_re = re.compile(r'^(\s*)"name"\s*:\s*("(?:\\.|[^"\\])*")\s*,?\s*
+    urls_re = re.compile(r'^(\s*)"urls"\s*:\s*\[\s*$')
+
+    for i, line in enumerate(lines):
+        match = name_re.match(line.rstrip("\r\n"))
+        if not match:
+            continue
+        try:
+            name = json.loads(match.group(2))
+        except Exception:
+            continue
+
+        urls_line = None
+        for j in range(i + 1, len(lines)):
+            if name_re.match(lines[j].rstrip("\r\n")):
+                break
+            if urls_re.match(lines[j].rstrip("\r\n")):
+                urls_line = j
+                break
+        if urls_line is None:
+            continue
+
+        close_line = None
+        for j in range(urls_line + 1, len(lines)):
+            if re.match(r"^\s*\]\s*,?\s*(?:\r?\n)?$", lines[j]):
+                close_line = j
+                break
+        if close_line is None:
+            continue
+
+        urls = []
+        for j in range(urls_line + 1, close_line):
+            item = lines[j].strip().rstrip(",")
+            if item:
+                try:
+                    urls.append(json.loads(item))
+                except Exception:
+                    pass
+        found.append({
+            "name": name,
+            "urls": urls,
+            "open_line": urls_line,
+            "close_line": close_line,
+        })
+    return lines, found
+
+
+def main():
+    if not TARGET_FILE.exists():
+        raise SystemExit(f"找不到目标文件：{TARGET_FILE}")
+
+    original = TARGET_FILE.read_text(encoding="utf-8")
+    try:
+        parsed = json.loads(original)
+    except Exception as exc:
+        raise SystemExit(f"sources.json 不是有效 JSON，停止修改：{exc}")
+
+    targets = parsed.get("sources")
+    if not isinstance(targets, list):
+        raise SystemExit("sources.json 缺少 sources 数组，停止修改")
+
+    backup_text = fetch_text(SOURCE_LIST_URL)
+    backup_rows = parse_backup_list(backup_text)
+    lines, located = locate_url_arrays(original)
+
+    # 以 JSON 实际结构为准，且要求 name 唯一对应到文本中的 urls 数组。
+    target_by_name = {}
+    for item in targets:
+        if isinstance(item, dict) and isinstance(item.get("name"), str):
+            target_by_name.setdefault(item["name"], item)
+
+    additions = {}
+    for target_name, target_obj in target_by_name.items():
+        if not isinstance(target_obj.get("urls"), list):
+            continue
+        candidates = []
+        for backup_name, url in backup_rows:
+            if shares_two_chars(target_name, backup_name):
+                candidates.append(url)
+
+        existing = {canonical_url(u) for u in target_obj["urls"] if isinstance(u, str)}
+        accepted = []
+        for url in candidates:
+            key = canonical_url(url)
+            if key in existing:
+                print(f"[重复] {target_name}: {url}")
+                continue
+            ok, detail = is_accessible(url)
+            if not ok:
+                print(f"[不可访问] {target_name}: {url} ({detail})")
+                continue
+            print(f"[可访问] {target_name}: {url} ({detail})")
+            existing.add(key)
+            accepted.append(url)
+        if accepted:
+            additions[target_name] = accepted
+
+    if not additions:
+        print("没有符合条件的可写入备用网址，文件保持不变。")
+        return
+
+    # 只在对应 urls 数组内插入新行，其他字节级文本布局不重新格式化。
+    insertions = {}
+    for item in located:
+        name = item["name"]
+        if name not in additions:
+            continue
+        # 缩进沿用 urls 数组现有元素；空数组则按 urls 键缩进增加 4 个空格。
+        open_indent = re.match(r"^\s*", lines[item["open_line"]]).group(0)
+        element_indent = None
+        for j in range(item["open_line"] + 1, item["close_line"]):
+            if lines[j].strip():
+                element_indent = re.match(r"^\s*", lines[j]).group(0)
+                break
+        if element_indent is None:
+            element_indent = open_indent + "  "
+
+        close_line = item["close_line"]
+        prior = close_line - 1
+        while prior > item["open_line"] and not lines[prior].strip():
+            prior -= 1
+        if prior > item["open_line"]:
+            previous_text = lines[prior].rstrip("\r\n").rstrip()
+            if not previous_text.endswith(","):
+                lines[prior] = previous_text + ",\n"
+
+        new_lines = []
+        for index, url in enumerate(additions[name]):
+            comma = "," if index < len(additions[name]) - 1 else ""
+            new_lines.append(
+                element_indent + json.dumps(url, ensure_ascii=False) + comma + "\n"
+            )
+        insertions.setdefault(close_line, []).extend(new_lines)
+
+    for index in sorted(insertions.keys(), reverse=True):
+        lines[index:index] = insertions[index]
+
+    updated = "".join(lines)
+    # 写盘前再次校验，防止任何意外破坏 JSON。
+    json.loads(updated)
+    TARGET_FILE.write_text(updated, encoding="utf-8", newline="")
+    total = sum(len(urls) for urls in additions.values())
+    print(f"完成：为 {len(additions)} 个已有来源新增 {total} 条可访问备用网址。")
+
+
+if __name__ == "__main__":
+    main()
+)
     urls_re = re.compile(r'^(\s*)"urls"\s*:\s*\[\s*$')
 
     for i, line in enumerate(lines):
