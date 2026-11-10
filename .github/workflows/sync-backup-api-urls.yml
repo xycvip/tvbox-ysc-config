@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Sync accessible backup URLs
-        run: python scripts/sync_backup_list.py
+        run: python .github/scripts/sync_backup_list.py
 
       - name: Commit changes
         run: |
