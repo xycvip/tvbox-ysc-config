@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-10 12:17:09",
+  "updated_at": "2026-11-10 14:57:07",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "http://肥猫.net/",
+      "used_url": "http://w.junce.dpdns.org/fm.gif",
       "error": null,
       "source_urls": [
         "http://hello.肥猫.net/",

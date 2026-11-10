@@ -1,5 +1,5 @@
 {
-  "spider": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261110/xuXC/0X0/11101130.png;md5;9f7227651023177d2a036830180add15",
+  "spider": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261110/bvnB/0X0/11101405.png;md5;d926148cb5eb6fa6495568adb9a6ae28",
   "wallpaper": "http://127.0.0.1:9978/proxy?do=wallpaper",
   "logo": "https://pic7.fukit.cn/autoupload/gE6Y0Af2tjXBCNig6CtNDI12_FRYNb81z6UPhMWD8iI/20251224/dJkT/1080X1080/logo.jpg/webp",
   "danmaku": "http://127.0.0.1:9978/proxy?do=danmaku&name={name}&episode={episode}",
@@ -48,6 +48,15 @@
       "ext": {
         "url": "http://v.rbotv.cn"
       }
+    },
+    {
+      "key": "米诺",
+      "name": "米诺 • APP",
+      "type": 3,
+      "api": "csp_AppMN",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
     },
     {
       "key": "快映fox",
@@ -667,6 +676,18 @@
         "分类url": "https://www.mochadj.com/i/{cateId}-{catePg}.html"
       },
       "genre": "shortdrama"
+    },
+    {
+      "key": "懂片",
+      "name": "懂片 • 影视",
+      "type": 3,
+      "api": "csp_DongPian"
+    },
+    {
+      "key": "杜北",
+      "name": "杜北 • 影视",
+      "type": 3,
+      "api": "csp_Dubk"
     },
     {
       "key": "星辰影视",
