@@ -305,7 +305,12 @@ def fetch_config(url):
 
 
 def check_http_url(url, timeout=10):
-    result = {"url": url, "http_status": None, "final_url": None, "error": None}
+    """检测链接可用性并记录从请求开始到响应头返回的耗时。"""
+    started = time.monotonic()
+    result = {
+        "url": url, "http_status": None, "final_url": None,
+        "elapsed_ms": None, "error": None,
+    }
     try:
         with requests.get(
             url,
@@ -322,7 +327,19 @@ def check_http_url(url, timeout=10):
         result["error"] = f"连接失败：{exc.__class__.__name__}"
     except Exception as exc:
         result["error"] = f"检测异常：{exc.__class__.__name__}"
+    finally:
+        result["elapsed_ms"] = round((time.monotonic() - started) * 1000)
     return result
+
+
+def build_subscription_entries(name, sid, raw_base):
+    """为每个配置生成直连、gh-proxy.com、gh-proxy.org 三条独立入口。"""
+    raw_url = f"{raw_base}/{sid}.json"
+    return [
+        {"name": name, "url": raw_url},
+        {"name": f"{name}1", "url": f"https://gh-proxy.com/{raw_url}"},
+        {"name": f"{name}2", "url": f"https://gh-proxy.org/{raw_url}"},
+    ]
 
 
 def _merge_list(fetched, field):
@@ -494,6 +511,7 @@ def http_status_text(result):
 
 
 def update_artifact_links(cfg, repo):
+    """生成三种访问方式的 README 链接，并实测可用性和响应耗时。"""
     if not os.path.exists(README_PATH):
         return
     with open(README_PATH, "r", encoding="utf-8") as file:
@@ -510,32 +528,62 @@ def update_artifact_links(cfg, repo):
     lines = [
         "以下地址由 GitHub Actions 自动更新，每个代码框右上角可复制。",
         "",
-        "> HTTP 状态为 GitHub Actions 运行环境中的检测结果，不代表所有手机、电视或网络均可访问。",
+        "> 每个配置提供三条独立访问线路：原始直链、gh-proxy.com、gh-proxy.org。",
+        "> 下方耗时为 GitHub Actions 运行环境从发起请求到收到响应头的实测时间；不代表所有地区和运营商的实际速度。",
         "",
     ]
+    route_templates = [
+        ("原始直链", lambda raw_url: raw_url),
+        ("gh-proxy.com", lambda raw_url: f"https://gh-proxy.com/{raw_url}"),
+        ("gh-proxy.org", lambda raw_url: f"https://gh-proxy.org/{raw_url}"),
+    ]
+
     for label, filename in files:
         encoded = urllib.parse.quote(filename, safe="")
         raw_url = f"https://raw.githubusercontent.com/{repo}/main/output/{encoded}"
-        proxy_url = f"https://gh-proxy.org/{raw_url}"
-        print(f"[HTTP] 检测原始直链：{label}")
-        raw_status = http_status_text(check_http_url(raw_url))
-        print(f"       {raw_status}")
-        print(f"[HTTP] 检测代理链接：{label}")
-        proxy_status = http_status_text(check_http_url(proxy_url))
-        print(f"       {proxy_status}")
-        lines.extend([
-            f"### {label}", "",
-            f"**原始直链状态：{raw_status}**", "",
-            "**原始直链**", "", "```text", raw_url, "```", "",
-            f"**代理链接状态：{proxy_status}**", "",
-            "**代理链接**", "", "```text", proxy_url, "```", "",
-        ])
+        checks = []
+        for route_name, make_url in route_templates:
+            route_url = make_url(raw_url)
+            print(f"[测速] {label} / {route_name}: {route_url}")
+            result = check_http_url(route_url, timeout=10)
+            checks.append((route_name, route_url, result))
+            print(f"       {http_status_text(result)} · {result.get('elapsed_ms')} ms")
 
-    block = "\n".join(lines).rstrip()
+        working = [
+            item for item in checks
+            if item[2].get("http_status") is not None
+            and 200 <= item[2]["http_status"] < 300
+        ]
+        fastest = min(
+            working,
+            key=lambda item: item[2].get("elapsed_ms") or float("inf")
+        ) if working else None
+
+        lines.extend([f"### {label}", ""])
+        for route_name, route_url, result in checks:
+            code = result.get("http_status")
+            elapsed = result.get("elapsed_ms")
+            if code is not None and 200 <= code < 300:
+                availability = f"可用（HTTP {code}，{elapsed} ms）"
+            elif code is not None:
+                availability = f"不可用（HTTP {code}，{elapsed} ms）"
+            else:
+                availability = f"不可用（{result.get('error') or '检测失败'}，{elapsed} ms）"
+            fastest_mark = " 🏁 当前最快" if fastest and fastest[0] == route_name else ""
+            lines.extend([
+                f"**{route_name}：{availability}{fastest_mark}**",
+                "",
+                "\u0060\u0060\u0060text",
+                route_url,
+                "\u0060\u0060\u0060",
+                "",
+            ])
+
+    block = "\\n".join(lines).rstrip()
     prefix = readme.split(ARTIFACTS_START, 1)[0]
     suffix = readme.split(ARTIFACTS_END, 1)[1]
     with open(README_PATH, "w", encoding="utf-8") as file:
-        file.write(f"{prefix}{ARTIFACTS_START}\n{block}\n{ARTIFACTS_END}{suffix}")
+        file.write(f"{prefix}{ARTIFACTS_START}\\n{block}\\n{ARTIFACTS_END}{suffix}")
 
 
 def write_badge(ok_count, total):
@@ -599,10 +647,8 @@ def main():
     now_str = datetime.datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
     repo = (os.environ.get("GITHUB_REPOSITORY")
             or os.environ.get("REPO") or DEFAULT_REPO)
-    raw_base = (
-        f"https://gh-proxy.org/https://raw.githubusercontent.com/"
-        f"{repo}/main/output"
-    )
+    # 多仓订阅同时发布 GitHub 原始直链和两个独立代理入口，避免单代理故障导致全线失联。
+    raw_base = f"https://raw.githubusercontent.com/{repo}/main/output"
 
     status = {"updated_at": now_str, "repo": repo, "sources": []}
     subscriptions, fetched = [], []
@@ -627,7 +673,7 @@ def main():
                 with open(out_path, "w", encoding="utf-8") as file:
                     json.dump(data, file, ensure_ascii=False, indent=2)
                 entry.update({"ok": True, "used_url": url, "error": None})
-                subscriptions.append({"name": name, "url": f"{raw_base}/{sid}.json"})
+                subscriptions.extend(build_subscription_entries(name, sid, raw_base))
                 fetched.append((sid, name, data))
                 ok_count += 1
                 saved = True
@@ -646,7 +692,7 @@ def main():
                     with open(cache_path, "r", encoding="utf-8") as file:
                         cached = json.load(file)
                     if is_valid_tvbox_config(cached):
-                        subscriptions.append({"name": name, "url": f"{raw_base}/{sid}.json"})
+                subscriptions.extend(build_subscription_entries(name, sid, raw_base))
                         fetched.append((sid, name, cached))
                         entry.update({
                             "ok": True, "cached": True,
