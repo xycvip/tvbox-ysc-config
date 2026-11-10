@@ -1,40 +1,19 @@
 {
-  "updated_at": "2026-11-10 17:18:42",
+  "updated_at": "2026-11-10 18:16:35",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
       "id": "feimao",
       "name": "肥猫",
       "ok": true,
-      "used_url": "http://肥猫.net/",
+      "used_url": "http://hello.肥猫.net/",
       "error": null,
       "source_urls": [
         "http://hello.肥猫.net/",
         "http://肥猫.net/",
         "http://w.junce.dpdns.org/fm.gif"
       ],
-      "output_url": "http://肥猫.net/",
-      "selected_url": "http://w.junce.dpdns.org/fm.gif",
-      "speed_checks": [
-        {
-          "url": "http://hello.肥猫.net/",
-          "ok": false,
-          "elapsed_ms": 46021,
-          "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：肥猫接口 HTTP 524：无错误详情；响应诊断：HTTP=200; final_url=http://hello.xn--z7x900a.net/; Content-Type='text/html'; Content-Disposition=''; bytes=25212; preview='24236c6376646f677964693533687923244bc6613ef9197f37f54b9562a15e4a5078672e45648a9b7a248b1eb3a7136b'"
-        },
-        {
-          "url": "http://肥猫.net/",
-          "ok": true,
-          "elapsed_ms": 5530,
-          "error": null
-        },
-        {
-          "url": "http://w.junce.dpdns.org/fm.gif",
-          "ok": true,
-          "elapsed_ms": 301,
-          "error": null
-        }
-      ]
+      "output_url": "http://hello.肥猫.net/"
     },
     {
       "id": "fantaiying",
@@ -45,30 +24,11 @@
       "source_urls": [
         "http://www.饭太硬.net/tv",
         "http://www.饭太硬.cc/tv",
-        "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp"
+        "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
+        "http://fty.888484.xyz/tv",
+        "http://fty.333232.xyz/tv"
       ],
-      "output_url": "http://www.饭太硬.net/tv",
-      "selected_url": "http://www.饭太硬.cc/tv",
-      "speed_checks": [
-        {
-          "url": "http://www.饭太硬.net/tv",
-          "ok": true,
-          "elapsed_ms": 729,
-          "error": null
-        },
-        {
-          "url": "http://www.饭太硬.cc/tv",
-          "ok": true,
-          "elapsed_ms": 415,
-          "error": null
-        },
-        {
-          "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
-          "ok": true,
-          "elapsed_ms": 1250,
-          "error": null
-        }
-      ]
+      "output_url": "http://www.饭太硬.net/tv"
     },
     {
       "id": "wangerxiao",
@@ -79,30 +39,12 @@
       "source_urls": [
         "https://d.kstore.dev/download/9280/wex.json",
         "https://9280.kstore.vip/newwex.json",
-        "http://new.王二小放牛娃.top"
+        "http://new.王二小放牛娃.top",
+        "https://9280.kstore.vip/aiwex.json",
+        "https://9280.kstore.space/aiwex.json",
+        "http://tvbox.王二小放牛娃.top"
       ],
-      "output_url": "https://d.kstore.dev/download/9280/wex.json",
-      "selected_url": "https://d.kstore.dev/download/9280/wex.json",
-      "speed_checks": [
-        {
-          "url": "https://d.kstore.dev/download/9280/wex.json",
-          "ok": true,
-          "elapsed_ms": 300,
-          "error": null
-        },
-        {
-          "url": "https://9280.kstore.vip/newwex.json",
-          "ok": true,
-          "elapsed_ms": 418,
-          "error": null
-        },
-        {
-          "url": "http://new.王二小放牛娃.top",
-          "ok": true,
-          "elapsed_ms": 907,
-          "error": null
-        }
-      ]
+      "output_url": "https://d.kstore.dev/download/9280/wex.json"
     },
     {
       "id": "moyuer",
@@ -113,30 +55,11 @@
       "source_urls": [
         "http://我不是.摸鱼儿.top",
         "http://我不是.摸鱼儿.cc/",
-        "https://6800.kstore.vip/fish.json"
+        "https://6800.kstore.vip/fish.json",
+        "http://www.y456y.com",
+        "http://fish.y456y.com"
       ],
-      "output_url": "http://我不是.摸鱼儿.top",
-      "selected_url": "https://6800.kstore.vip/fish.json",
-      "speed_checks": [
-        {
-          "url": "http://我不是.摸鱼儿.top",
-          "ok": true,
-          "elapsed_ms": 835,
-          "error": null
-        },
-        {
-          "url": "http://我不是.摸鱼儿.cc/",
-          "ok": true,
-          "elapsed_ms": 1133,
-          "error": null
-        },
-        {
-          "url": "https://6800.kstore.vip/fish.json",
-          "ok": true,
-          "elapsed_ms": 354,
-          "error": null
-        }
-      ]
+      "output_url": "http://我不是.摸鱼儿.top"
     },
     {
       "id": "aowu",
@@ -149,28 +72,7 @@
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
       ],
-      "output_url": "http://www.英格里希嗷呜.top/tv",
-      "selected_url": "https://9763.kstore.vip/aowu.json",
-      "speed_checks": [
-        {
-          "url": "http://www.英格里希嗷呜.top/tv",
-          "ok": true,
-          "elapsed_ms": 2935,
-          "error": null
-        },
-        {
-          "url": "https://9763.kstore.vip/aowu.json",
-          "ok": true,
-          "elapsed_ms": 366,
-          "error": null
-        },
-        {
-          "url": "http://itv666.cc/aowu/config.webp",
-          "ok": true,
-          "elapsed_ms": 6916,
-          "error": null
-        }
-      ]
+      "output_url": "http://www.英格里希嗷呜.top/tv"
     },
     {
       "id": "niuhu",
@@ -181,8 +83,7 @@
       "source_urls": [
         "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json"
       ],
-      "output_url": "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json",
-      "selected_url": "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json"
+      "output_url": "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json"
     },
     {
       "id": "xiaoma",
@@ -193,8 +94,7 @@
       "source_urls": [
         "https://szyyds.cn/tv/x.json"
       ],
-      "output_url": "https://szyyds.cn/tv/x.json",
-      "selected_url": "https://szyyds.cn/tv/x.json"
+      "output_url": "https://szyyds.cn/tv/x.json"
     },
     {
       "id": "4k",
@@ -206,22 +106,7 @@
         "http://xhztv.top/4k.json",
         "http://xhztv.top/xhz"
       ],
-      "output_url": "http://xhztv.top/4k.json",
-      "selected_url": "http://xhztv.top/4k.json",
-      "speed_checks": [
-        {
-          "url": "http://xhztv.top/4k.json",
-          "ok": true,
-          "elapsed_ms": 136,
-          "error": null
-        },
-        {
-          "url": "http://xhztv.top/xhz",
-          "ok": true,
-          "elapsed_ms": 292,
-          "error": null
-        }
-      ]
+      "output_url": "http://xhztv.top/4k.json"
     },
     {
       "id": "xiaosa",
@@ -232,8 +117,7 @@
       "source_urls": [
         "https://9877.kstore.space/sun.json"
       ],
-      "output_url": "https://9877.kstore.space/sun.json",
-      "selected_url": "https://9877.kstore.space/sun.json"
+      "output_url": "https://9877.kstore.space/sun.json"
     }
   ]
 }

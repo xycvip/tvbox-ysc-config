@@ -1,20 +1,12 @@
 {
   "urls": [
     {
-      "name": "肥猫",
-      "url": "http://w.junce.dpdns.org/fm.gif"
-    },
-    {
       "name": "肥猫1",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json"
     },
     {
       "name": "肥猫2",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json"
-    },
-    {
-      "name": "饭太硬",
-      "url": "http://www.饭太硬.cc/tv"
     },
     {
       "name": "饭太硬1",
@@ -25,20 +17,12 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json"
     },
     {
-      "name": "王二小",
-      "url": "https://d.kstore.dev/download/9280/wex.json"
-    },
-    {
       "name": "王二小1",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json"
     },
     {
       "name": "王二小2",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json"
-    },
-    {
-      "name": "摸鱼儿",
-      "url": "https://6800.kstore.vip/fish.json"
     },
     {
       "name": "摸鱼儿1",
@@ -49,20 +33,12 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json"
     },
     {
-      "name": "嗷呜",
-      "url": "https://9763.kstore.vip/aowu.json"
-    },
-    {
       "name": "嗷呜1",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json"
     },
     {
       "name": "嗷呜2",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json"
-    },
-    {
-      "name": "牛虎",
-      "url": "https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json"
     },
     {
       "name": "牛虎1",
@@ -73,10 +49,6 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json"
     },
     {
-      "name": "小马",
-      "url": "https://szyyds.cn/tv/x.json"
-    },
-    {
       "name": "小马1",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json"
     },
@@ -85,20 +57,12 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json"
     },
     {
-      "name": "4K小盒子",
-      "url": "http://xhztv.top/4k.json"
-    },
-    {
       "name": "4K小盒子1",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json"
     },
     {
       "name": "4K小盒子2",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json"
-    },
-    {
-      "name": "潇洒",
-      "url": "https://9877.kstore.space/sun.json"
     },
     {
       "name": "潇洒1",
