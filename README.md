@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-10 08:15:25（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-10 12:14:33（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -27,7 +27,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 | 王二小 | ✅ 更新成功 |
 | 摸鱼儿 | ✅ 更新成功 |
 | 嗷呜 | ✅ 更新成功 |
-| 老刘备 | ✅ 更新成功 |
+| 牛虎 | ✅ 更新成功 |
 | 小马 | ✅ 更新成功 |
 | 4K小盒子 | ✅ 更新成功 |
 | 潇洒 | ✅ 更新成功 |
@@ -136,12 +136,12 @@ https://9763.kstore.vip/aowu.json
 http://itv666.cc/aowu/config.webp
 ```
 
-**老刘备**
+**牛虎**
 
 **配置地址：✅ 可用（HTTP 200）**
 
 ```text
-https://raw.liucn.cc/box/m.json
+https://raw.githubusercontent.com/niubihu1/tvbox/main/1.json
 ```
 
 **小马**
@@ -329,22 +329,22 @@ https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 ```
 
-### 线路 · 老刘备
+### 线路 · 牛虎
 
-**原始直链状态：✅ HTTP 200**
+**原始直链状态：❌ HTTP 404（地址不存在）**
 
 **原始直链**
 
 ```text
-https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
+https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json
 ```
 
-**代理链接状态：✅ HTTP 200**
+**代理链接状态：❌ HTTP 404（地址不存在）**
 
 **代理链接**
 
 ```text
-https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/laoliubei.json
+https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json
 ```
 
 ### 线路 · 小马
