@@ -332,19 +332,18 @@ def check_http_url(url, timeout=10):
     return result
 
 
-def build_subscription_entries(name, original_url, source_id, repo):
+def build_subscription_entries(name, source_id, repo):
     """
-    生成三条不同来源的订阅入口：
-    - 原名称：config/sources.json 中测速择优后的上游原始地址
-    - 名称1/名称2：通过 gh-proxy.com / gh-proxy.org 访问本仓库已生成的 output JSON
+    只生成两条代理订阅入口：
+    - 名称1：通过 gh-proxy.com 访问本仓库已生成的 output JSON
+    - 名称2：通过 gh-proxy.org 访问本仓库已生成的 output JSON
+    不再发布上游原始地址，也不对上游地址测速择优。
     """
-    original_url = str(original_url).strip()
     filename = urllib.parse.quote(f"{source_id}.json", safe="")
     output_url = (
         f"https://raw.githubusercontent.com/{repo}/main/output/{filename}"
     )
     return [
-        {"name": name, "url": original_url},
         {"name": f"{name}1", "url": f"https://gh-proxy.com/{output_url}"},
         {"name": f"{name}2", "url": f"https://gh-proxy.org/{output_url}"},
     ]
@@ -714,57 +713,9 @@ def main():
             ok_count += 1
             saved = True
 
-            # 第二阶段：仅在生成单仓/多仓订阅入口时测速择优。
-            # 第一阶段已经测过的地址复用其完整获取耗时；继续测试尚未尝试的地址。
-            if len(urls) > 1:
-                subscription_candidates = []
-                speed_checks = []
-                for result in phase1_results:
-                    speed_checks.append({
-                        "url": result["url"], "ok": result["ok"],
-                        "elapsed_ms": result["elapsed_ms"],
-                        "error": result["error"],
-                    })
-                    if result["ok"]:
-                        subscription_candidates.append(
-                            (result["elapsed_ms"], result["url"])
-                        )
-
-                for index in range(_first_index + 1, len(urls)):
-                    url = urls[index]
-                    started = time.monotonic()
-                    try:
-                        fetch_config(url)
-                        elapsed_ms = round((time.monotonic() - started) * 1000)
-                        subscription_candidates.append((elapsed_ms, url))
-                        speed_checks.append({
-                            "url": url, "ok": True, "elapsed_ms": elapsed_ms,
-                            "error": None,
-                        })
-                        print(f"[订阅测速] {name} / 原始地址 {index + 1}: 可用，{elapsed_ms} ms")
-                    except Exception as exc:
-                        error = str(exc)
-                        elapsed_ms = round((time.monotonic() - started) * 1000)
-                        speed_checks.append({
-                            "url": url, "ok": False, "elapsed_ms": elapsed_ms,
-                            "error": error,
-                        })
-                        print(f"[订阅测速] {name} / 原始地址 {index + 1}: 失败，{elapsed_ms} ms -> {error}")
-                    if index < len(urls) - 1:
-                        time.sleep(URL_INTERVAL)
-
-                if subscription_candidates:
-                    best_elapsed, best_url = min(
-                        subscription_candidates, key=lambda item: item[0]
-                    )
-                    subscriptions.extend(build_subscription_entries(name, best_url, sid, repo))
-                    entry["selected_url"] = best_url
-                    entry["speed_checks"] = speed_checks
-                    print(f"[订阅优选] {name} 选择最快可用上游地址：{best_url}（{best_elapsed} ms）")
-            else:
-                # 单个地址无需测速比较，直接用于订阅中的原始线路。
-                subscriptions.extend(build_subscription_entries(name, first_url, sid, repo))
-                entry["selected_url"] = first_url
+            # 不再对上游原始地址测速择优；无论来源有几条上游地址，
+            # 订阅中都只发布名称1和名称2两条代理线路。
+            subscriptions.extend(build_subscription_entries(name, sid, repo))
         elif len(urls) > 1:
             # output 更新阶段全部失败时，记录失败地址的请求耗时；缓存回退逻辑保持不变。
             entry["speed_checks"] = [
@@ -783,10 +734,8 @@ def main():
                     with open(cache_path, "r", encoding="utf-8") as file:
                         cached = json.load(file)
                     if is_valid_tvbox_config(cached):
-                        # 本次上游全部失败但沿用缓存时，没有可参与择优的有效地址；
-                        # 保留原有首地址作为订阅原始线路的兜底入口。
-                        if urls:
-                            subscriptions.extend(build_subscription_entries(name, urls[0], sid, repo))
+                        # 使用缓存时同样只发布名称1和名称2两条代理线路。
+                        subscriptions.extend(build_subscription_entries(name, sid, repo))
                         fetched.append((sid, name, cached))
                         entry.update({
                             "ok": True, "cached": True,
