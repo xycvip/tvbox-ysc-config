@@ -126,7 +126,7 @@ def locate_url_arrays(text):
     """按 sources 对象的 name 行定位 urls 数组，避免重新序列化整个 JSON。"""
     lines = text.splitlines(keepends=True)
     found = []
-    name_re = re.compile(r'^(\s*)"name"\s*:\s*("(?:\\.|[^"\\])*")\s*,?\s*
+    name_re = re.compile(r'^(\s*)"name"\s*:\s*("(?:\\.|[^"\\])*")\s*,?\s*$')
     urls_re = re.compile(r'^(\s*)"urls"\s*:\s*\[\s*$')
 
     for i, line in enumerate(lines):
