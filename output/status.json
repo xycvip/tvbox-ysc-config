@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10 15:22:19",
+  "updated_at": "2026-11-10 15:27:21",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -19,19 +19,19 @@
         {
           "url": "http://hello.肥猫.net/",
           "ok": true,
-          "elapsed_ms": 23326,
+          "elapsed_ms": 11476,
           "error": null
         },
         {
           "url": "http://肥猫.net/",
           "ok": true,
-          "elapsed_ms": 4086,
+          "elapsed_ms": 5992,
           "error": null
         },
         {
           "url": "http://w.junce.dpdns.org/fm.gif",
           "ok": true,
-          "elapsed_ms": 516,
+          "elapsed_ms": 185,
           "error": null
         }
       ]
@@ -53,19 +53,19 @@
         {
           "url": "http://www.饭太硬.net/tv",
           "ok": true,
-          "elapsed_ms": 713,
+          "elapsed_ms": 1158,
           "error": null
         },
         {
           "url": "http://www.饭太硬.cc/tv",
           "ok": true,
-          "elapsed_ms": 504,
+          "elapsed_ms": 623,
           "error": null
         },
         {
           "url": "https://cdn09022024.gitlink.org.cn/api/v1/repos/xxooo/in/raw/in.bmp",
           "ok": true,
-          "elapsed_ms": 1743,
+          "elapsed_ms": 1687,
           "error": null
         }
       ]
@@ -87,19 +87,19 @@
         {
           "url": "https://d.kstore.dev/download/9280/wex.json",
           "ok": true,
-          "elapsed_ms": 370,
+          "elapsed_ms": 369,
           "error": null
         },
         {
           "url": "https://9280.kstore.vip/newwex.json",
           "ok": true,
-          "elapsed_ms": 564,
+          "elapsed_ms": 719,
           "error": null
         },
         {
           "url": "http://new.王二小放牛娃.top",
           "ok": true,
-          "elapsed_ms": 2182,
+          "elapsed_ms": 1167,
           "error": null
         }
       ]
@@ -121,19 +121,19 @@
         {
           "url": "http://我不是.摸鱼儿.top",
           "ok": true,
-          "elapsed_ms": 1176,
+          "elapsed_ms": 1346,
           "error": null
         },
         {
           "url": "http://我不是.摸鱼儿.cc/",
           "ok": true,
-          "elapsed_ms": 1168,
+          "elapsed_ms": 1121,
           "error": null
         },
         {
           "url": "https://6800.kstore.vip/fish.json",
           "ok": true,
-          "elapsed_ms": 835,
+          "elapsed_ms": 544,
           "error": null
         }
       ]
@@ -155,19 +155,19 @@
         {
           "url": "http://www.英格里希嗷呜.top/tv",
           "ok": true,
-          "elapsed_ms": 3047,
+          "elapsed_ms": 2015,
           "error": null
         },
         {
           "url": "https://9763.kstore.vip/aowu.json",
           "ok": true,
-          "elapsed_ms": 520,
+          "elapsed_ms": 673,
           "error": null
         },
         {
           "url": "http://itv666.cc/aowu/config.webp",
           "ok": true,
-          "elapsed_ms": 3834,
+          "elapsed_ms": 6411,
           "error": null
         }
       ]
@@ -212,13 +212,13 @@
         {
           "url": "http://xhztv.top/4k.json",
           "ok": true,
-          "elapsed_ms": 219,
+          "elapsed_ms": 233,
           "error": null
         },
         {
           "url": "http://xhztv.top/xhz",
           "ok": true,
-          "elapsed_ms": 441,
+          "elapsed_ms": 400,
           "error": null
         }
       ]
@@ -227,12 +227,13 @@
       "id": "xiaosa",
       "name": "潇洒",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：肥猫接口 HTTP 524：无错误详情；响应诊断：HTTP=200; final_url=https://9877.kstore.space/sun.json; Content-Type='text/plain'; Content-Disposition=''; bytes=56924; preview='2423313233343536373839303132332324af8a71deeab615a1157e323453cf5e61902629c1c791b822ba8fc559da30d5'",
+      "used_url": "https://9877.kstore.space/sun.json",
+      "error": null,
       "source_urls": [
         "https://9877.kstore.space/sun.json"
       ],
-      "cached": true
+      "output_url": "https://9877.kstore.space/sun.json",
+      "selected_url": "https://9877.kstore.space/sun.json"
     }
   ]
 }
