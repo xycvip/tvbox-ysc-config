@@ -1,0 +1,40 @@
+name: Sync backup API URLs
+
+"on":
+  workflow_dispatch:
+  schedule:
+    - cron: "25 5,17 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-backup-api-urls
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync accessible backup URLs
+        run: python scripts/sync_backup_list.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/sources.json
+          if git diff --cached --quiet; then
+            echo "::notice::没有新增可用备用网址，跳过提交"
+          else
+            git commit -m "chore: sync accessible backup API URLs"
+            git push origin main
+          fi
