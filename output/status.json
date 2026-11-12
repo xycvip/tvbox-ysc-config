@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12 05:04:34",
+  "updated_at": "2026-11-12 17:19:18",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -113,12 +113,12 @@
       "id": "xiaosa",
       "name": "潇洒",
       "ok": true,
-      "used_url": "https://9877.kstore.space/sun.json",
-      "error": null,
+      "used_url": "(缓存)",
+      "error": "响应可解析为 JSON，但缺少 TVBox 单仓/多仓关键字段；本地伪装载荷解析失败：没有找到可解码的 '**' + Base64 JSON 载荷；肥猫在线解密失败：肥猫接口 HTTP 522：无错误详情；响应诊断：HTTP=200; final_url=https://9877.kstore.space/sun.json; Content-Type='text/plain'; Content-Disposition=''; bytes=57212; preview='2423313233343536373839303132332324af8a71deeab615a1157e323453cf5e61902629c1c791b822ba8fc559da30d5'",
       "source_urls": [
         "https://9877.kstore.space/sun.json"
       ],
-      "output_url": "https://9877.kstore.space/sun.json"
+      "cached": true
     }
   ]
 }
