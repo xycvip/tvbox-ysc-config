@@ -8219,7 +8219,7 @@
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_配置中心",
@@ -8233,14 +8233,14 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_本地",
       "name": "潇洒|本地 • 视频",
       "type": 3,
       "api": "csp_LocalFile",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_预告",
@@ -8248,7 +8248,7 @@
       "type": 3,
       "api": "csp_YGP",
       "searchable": 0,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_热播影视",
@@ -8261,7 +8261,7 @@
       "ext": {
         "url": "http://v.rbotv.cn"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "米诺",
@@ -8271,7 +8271,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "下饭",
@@ -8281,7 +8281,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_快映fox",
@@ -8292,7 +8292,7 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "https://www.pjb777.top/ky4kbgq7b273.json",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_一起影视",
@@ -8302,7 +8302,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 0,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_咕噜",
@@ -8312,7 +8312,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_布布",
@@ -8330,7 +8330,7 @@
         "client": "8f3d2a1c7b6e5d4c9a0b1f2e3d4c5b6a",
         "sign": "ddtvf65f3a83d6d9ad6f"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "马猴影视",
@@ -8347,14 +8347,14 @@
         "sk": "SK-woniu-thanks",
         "ver": "1"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_韩圈",
       "name": "潇洒|韩圈 • APP",
       "type": 3,
       "api": "csp_Hxq",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_剧圈99",
@@ -8369,7 +8369,7 @@
         "buildNumber": "2002",
         "buildSignature": "054FA8DDA4319C6B6A9B954CA5777541C993F00B1B0BD4394F7EDE48184C4594"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_半日99",
@@ -8384,7 +8384,7 @@
         "buildNumber": "2001",
         "buildSignature": "A40DA80A59D170CAA950CF15C18C454D47A39B26989D8B640ECD745BA71BF5DC"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_天堂",
@@ -8405,7 +8405,7 @@
         "version": "3.0.0.7",
         "decrypt": "0"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_橘汁",
@@ -8426,7 +8426,7 @@
         "version": "3.0.7.0",
         "decrypt": "1"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_华谊",
@@ -8447,7 +8447,7 @@
         "version": "6.0.0.1",
         "decrypt": "0"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_苹果",
@@ -8468,7 +8468,7 @@
         "version": "1.0.0.3",
         "decrypt": "0"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "蓝鹰",
@@ -8484,7 +8484,7 @@
         "init": "initV122",
         "ua": "okhttp/3.10.0"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "蓝鸟",
@@ -8500,7 +8500,7 @@
         "init": "initV122",
         "ua": "okhttp/3.10.0"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_王子",
@@ -8514,7 +8514,7 @@
         "dataKey": "5a9w6x58dsq6z3a6",
         "dataIv": "5a9w6x58dsq6z3a6"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "茉莉Get",
@@ -8528,7 +8528,7 @@
         "dataKey": "88689667dce61725",
         "dataIv": "88689667dce61725"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_哔哩合集",
@@ -8547,7 +8547,7 @@
         "n": "哔哩合集",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_哔哩视频",
@@ -8565,14 +8565,14 @@
       "ext": {
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_三六零",
       "name": "潇洒|三六零 • 视频",
       "type": 3,
       "api": "csp_SP360",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_玩偶",
@@ -8592,7 +8592,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_快映",
@@ -8610,7 +8610,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_木偶",
@@ -8630,7 +8630,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_闪电",
@@ -8647,7 +8647,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_蜡笔",
@@ -8667,7 +8667,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_多多",
@@ -8686,7 +8686,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_八零",
@@ -8705,7 +8705,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_虎斑",
@@ -8723,7 +8723,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_花卷",
@@ -8741,7 +8741,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_种子",
@@ -8759,7 +8759,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_搬运",
@@ -8770,7 +8770,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_指南",
@@ -8786,7 +8786,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_小丑",
@@ -8802,7 +8802,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_茉莉",
@@ -8819,7 +8819,7 @@
         ]
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "爱盼",
@@ -8830,7 +8830,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "移动",
@@ -8841,7 +8841,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_即刻",
@@ -8855,7 +8855,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_双星",
@@ -8869,7 +8869,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "卡卡",
@@ -8883,7 +8883,7 @@
         "type": "list"
       },
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "红果短剧",
@@ -8898,7 +8898,7 @@
       "type": 3,
       "api": "csp_ShortQimao",
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_河马短剧",
@@ -8906,7 +8906,7 @@
       "type": 3,
       "api": "csp_ShortHema",
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_围观短剧",
@@ -8914,7 +8914,7 @@
       "type": 3,
       "api": "csp_ShortWeiguan",
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_好看短剧",
@@ -8922,7 +8922,7 @@
       "type": 3,
       "api": "csp_ShortHaokan",
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_星芽短剧",
@@ -8930,7 +8930,7 @@
       "type": 3,
       "api": "csp_ShortXingya",
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "果果短剧",
@@ -8944,35 +8944,35 @@
         "分类url": "https://www.mochadj.com/i/{cateId}-{catePg}.html"
       },
       "genre": "shortdrama",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "看剧",
       "name": "潇洒|看剧 • 影视",
       "type": 3,
       "api": "csp_KanJuAI",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_懂片",
       "name": "潇洒|懂片 • 影视",
       "type": 3,
       "api": "csp_DongPian",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_星辰影视",
       "name": "潇洒|星辰 • 影视",
       "type": 3,
       "api": "csp_XingChen",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_飞娱影视",
       "name": "潇洒|飞娱 • 影视",
       "type": 3,
       "api": "csp_Feiyu",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_旺旺影视",
@@ -8980,21 +8980,21 @@
       "type": 3,
       "api": "csp_Wwys",
       "ext": "https://vip.wwgz.cn:5200",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_独播影视",
       "name": "潇洒|独播 • 影视",
       "type": 3,
       "api": "csp_Duboku",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_瓜子影视",
       "name": "潇洒|瓜子 • 影视",
       "type": 3,
       "api": "csp_Gz360",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "厂长影视",
@@ -9005,7 +9005,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://cz01.vip",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_金牌影视",
@@ -9013,7 +9013,7 @@
       "type": 3,
       "api": "csp_Jpys",
       "ext": "https://y2s52n7.com,https://m.hkybqufgh.com,https://m.sizhengxt.com,https://m.9zhoukj.com,https://m.sizhengxt.com,https://m.jiabaide.cn",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "骚火影视",
@@ -9021,7 +9021,7 @@
       "type": 3,
       "api": "csp_SaoHuo",
       "ext": "https://shdy5.us",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "枫叶影视",
@@ -9029,7 +9029,7 @@
       "type": 3,
       "api": "csp_FengYe",
       "ext": "https://www.vip1949.com/",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_爱看机器人",
@@ -9039,7 +9039,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_1905",
@@ -9049,7 +9049,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "filterable": 0,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "番社动漫",
@@ -9077,42 +9077,42 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_赏月",
       "name": "潇洒|赏月 • 动漫",
       "type": 3,
       "api": "csp_AnimeTsukimi",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_稀饭",
       "name": "潇洒|稀饭 • 动漫",
       "type": 3,
       "api": "csp_AnimeXifan",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_巴士动漫",
       "name": "潇洒|巴士 • 动漫",
       "type": 3,
       "api": "csp_AnimeBashi",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_吉里动漫",
       "name": "潇洒|吉里 • 动漫",
       "type": 3,
       "api": "csp_AnimeGiri",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_花子动漫",
       "name": "潇洒|花子 • 动漫",
       "type": 3,
       "api": "csp_AnimeHuazi",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_荐片",
@@ -9125,7 +9125,7 @@
           "https://www.zxfmj.com"
         ]
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_New6v",
@@ -9136,7 +9136,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://www.xb6v.com",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_美剧迷",
@@ -9146,7 +9146,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_迅雷吧",
@@ -9157,7 +9157,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "https://xunlei8.me",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_电影港",
@@ -9167,7 +9167,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_阿里云盘",
@@ -9181,7 +9181,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_夸克网盘",
@@ -9195,7 +9195,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_UC网盘",
@@ -9209,7 +9209,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_百度网盘",
@@ -9223,7 +9223,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_迅雷云盘",
@@ -9237,7 +9237,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "光鸭云盘",
@@ -9251,7 +9251,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_天翼云盘",
@@ -9265,7 +9265,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_123云盘",
@@ -9279,7 +9279,7 @@
         "type": "list",
         "ratio": 1.433
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "觅盘",
@@ -9290,7 +9290,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "盘搜",
@@ -9301,7 +9301,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "酷乐",
@@ -9312,7 +9312,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "百酷",
@@ -9323,7 +9323,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "趣盘",
@@ -9334,7 +9334,7 @@
       "quickSearch": 0,
       "filterable": 0,
       "timeout": 60,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_88看球",
@@ -9347,7 +9347,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_飞球体育",
@@ -9360,7 +9360,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_瓜子体育",
@@ -9373,7 +9373,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_咖啡体育",
@@ -9386,7 +9386,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_球通体育",
@@ -9399,7 +9399,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_呦呦DJ",
@@ -9412,7 +9412,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_蜻蜓FM",
@@ -9425,7 +9425,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_听友听书",
@@ -9438,7 +9438,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_世界听书",
@@ -9461,7 +9461,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_博看听书",
@@ -9474,7 +9474,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_戏曲多多",
@@ -9487,7 +9487,7 @@
       "style": {
         "type": "list"
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_童趣",
@@ -9501,7 +9501,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_兔小贝",
@@ -9515,7 +9515,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_贝乐虎",
@@ -9529,7 +9529,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "哔哩哔哩音乐",
@@ -9547,7 +9547,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "哔哩哔哩听书",
@@ -9565,7 +9565,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "哔哩哔哩相声",
@@ -9583,7 +9583,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "哔哩哔哩小品",
@@ -9601,7 +9601,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "哔哩哔哩戏曲",
@@ -9619,7 +9619,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_少儿教育",
@@ -9637,7 +9637,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_小学课堂",
@@ -9655,7 +9655,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_初中课堂",
@@ -9673,7 +9673,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "高中课堂",
@@ -9691,7 +9691,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "急救教学",
@@ -9706,7 +9706,7 @@
         "ratio": 3.8
       },
       "gridview": "0-0-4.1",
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "养生堂",
@@ -9720,7 +9720,7 @@
         "type": "rect",
         "ratio": 1.618
       },
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     },
     {
       "key": "xiaosa_push_agent",
@@ -9731,7 +9731,7 @@
       "filterable": 0,
       "changeable": 0,
       "hide": 1,
-      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261113/Mywn/0X0/11131823.png;md5;cbe016eb3cb002ae62058604843f5106"
+      "jar": "https://aly2.tuchuangyun.top/autoupload/g1b6f/20261115/BVo1/0X0/11152307.png;md5;4ce58129f99424b27331050400df715f"
     }
   ],
   "lives": [
