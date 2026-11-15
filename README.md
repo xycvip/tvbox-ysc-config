@@ -18,7 +18,7 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-15 02:57:31（北京时间） · 成功 **9/9** 个源
+> 🔄 最近更新：2026-11-15 16:50:48（北京时间） · 成功 **9/9** 个源
 
 | 配置源 | 更新状态 |
 | --- | --- |
@@ -88,7 +88,7 @@ http://fty.888484.xyz/tv
 http://fty.333232.xyz/tv
 ```
 
-**地址 6：✅ 可用（HTTP 200）**
+**地址 6：❌ 不可用（HTTP 404）**
 
 ```text
 http://www.饭太硬.art/tv
@@ -254,19 +254,19 @@ tvbox-ysc-config/
 
 ### 多仓订阅
 
-**原始直链：可用（HTTP 200，98 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，176 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，156 ms）**
+**gh-proxy.com：可用（HTTP 200，207 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，248 ms）**
+**gh-proxy.org：可用（HTTP 200，107 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json
@@ -274,19 +274,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 单仓聚合
 
-**原始直链：可用（HTTP 200，131 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，238 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，163 ms）**
+**gh-proxy.com：可用（HTTP 200，205 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，234 ms）**
+**gh-proxy.org：可用（HTTP 200，62 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json
@@ -294,19 +294,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 肥猫
 
-**原始直链：可用（HTTP 200，98 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，162 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，142 ms）**
+**gh-proxy.com：可用（HTTP 200，173 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，249 ms）**
+**gh-proxy.org：可用（HTTP 200，78 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/feimao.json
@@ -314,19 +314,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 饭太硬
 
-**原始直链：可用（HTTP 200，87 ms）**
+**原始直链：可用（HTTP 200，141 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，99 ms）**
+**gh-proxy.com：可用（HTTP 200，148 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，77 ms） 🏁 当前最快**
+**gh-proxy.org：可用（HTTP 200，88 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/fantaiying.json
@@ -334,19 +334,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 王二小
 
-**原始直链：可用（HTTP 200，80 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，148 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，89 ms）**
+**gh-proxy.com：可用（HTTP 200，211 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，93 ms）**
+**gh-proxy.org：可用（HTTP 200，117 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/wangerxiao.json
@@ -354,19 +354,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 摸鱼儿
 
-**原始直链：可用（HTTP 200，102 ms）**
+**原始直链：可用（HTTP 200，146 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，88 ms） 🏁 当前最快**
+**gh-proxy.com：可用（HTTP 200，178 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，93 ms）**
+**gh-proxy.org：可用（HTTP 200，94 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/moyuer.json
@@ -374,19 +374,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 嗷呜
 
-**原始直链：可用（HTTP 200，90 ms）**
+**原始直链：可用（HTTP 200，136 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，174 ms）**
+**gh-proxy.com：可用（HTTP 200，230 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，81 ms） 🏁 当前最快**
+**gh-proxy.org：可用（HTTP 200，72 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/aowu.json
@@ -394,19 +394,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 牛虎
 
-**原始直链：可用（HTTP 200，111 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，169 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，113 ms）**
+**gh-proxy.com：可用（HTTP 200，181 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，246 ms）**
+**gh-proxy.org：可用（HTTP 200，90 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/niuhu.json
@@ -414,19 +414,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 小马
 
-**原始直链：可用（HTTP 200，118 ms）**
+**原始直链：可用（HTTP 200，289 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，109 ms）**
+**gh-proxy.com：可用（HTTP 200，172 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，79 ms） 🏁 当前最快**
+**gh-proxy.org：可用（HTTP 200，103 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaoma.json
@@ -434,19 +434,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 4K小盒子
 
-**原始直链：可用（HTTP 200，92 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，160 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，143 ms）**
+**gh-proxy.com：可用（HTTP 200，230 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，160 ms）**
+**gh-proxy.org：可用（HTTP 200，53 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/4k.json
@@ -454,19 +454,19 @@ https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/m
 
 ### 线路 · 潇洒
 
-**原始直链：可用（HTTP 200，102 ms） 🏁 当前最快**
+**原始直链：可用（HTTP 200，149 ms）**
 
 ```text
 https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 
-**gh-proxy.com：可用（HTTP 200，108 ms）**
+**gh-proxy.com：可用（HTTP 200，174 ms）**
 
 ```text
 https://gh-proxy.com/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
 ```
 
-**gh-proxy.org：可用（HTTP 200，257 ms）**
+**gh-proxy.org：可用（HTTP 200，88 ms） 🏁 当前最快**
 
 ```text
 https://gh-proxy.org/https://raw.githubusercontent.com/xycvip/tvbox-ysc-config/main/output/xiaosa.json
