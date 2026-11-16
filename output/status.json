@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16 17:00:49",
+  "updated_at": "2026-11-17 07:12:47",
   "repo": "xycvip/tvbox-ysc-config",
   "sources": [
     {
@@ -66,14 +66,14 @@
       "id": "aowu",
       "name": "嗷呜",
       "ok": true,
-      "used_url": "http://www.英格里希嗷呜.top/tv",
+      "used_url": "https://9763.kstore.vip/aowu.json",
       "error": null,
       "source_urls": [
         "http://www.英格里希嗷呜.top/tv",
         "https://9763.kstore.vip/aowu.json",
         "http://itv666.cc/aowu/config.webp"
       ],
-      "output_url": "http://www.英格里希嗷呜.top/tv"
+      "output_url": "https://9763.kstore.vip/aowu.json"
     },
     {
       "id": "niuhu",
